@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const NavWrapper = styled.nav`
-	background-color: ${(props) => props.theme.colors.bahamaBlue};
-`;
+export const NavWrapper = styled.nav``;
 
 export const NavList = styled.ul``;
 
