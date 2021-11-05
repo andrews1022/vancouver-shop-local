@@ -4,6 +4,10 @@ import Head from 'next/head';
 // react
 import React from 'react';
 
+// components
+import Footer from '../Footer';
+import Nav from '../Nav';
+
 interface LayoutProps {
 	children: React.ReactNode;
 }
@@ -16,11 +20,11 @@ const Layout = ({ children }: LayoutProps) => (
 			<title>Vancouver Shop Local</title>
 		</Head>
 
-		<nav>Nav will go here!</nav>
+		<Nav />
 
 		<main>{children}</main>
 
-		<footer>Footer will go here!</footer>
+		<Footer />
 	</div>
 );
 
