@@ -17,7 +17,6 @@ const theme = {
 	},
 	shades: {
 		white: '#fff',
-		whiteSmoke: '#efefef',
 		black: '#000'
 	},
 	colors: {

@@ -5,25 +5,25 @@ import Link from 'next/link';
 import React from 'react';
 
 // styled components
-import { NavWrapper } from './styles';
+import { NavItem, NavList, NavTitle, NavWrapper } from './styles';
 
 const Nav = () => (
 	<NavWrapper>
-		<ul className='nav-list'>
-			<li className='nav-item'>
-				<h1>
+		<NavList>
+			<NavItem>
+				<NavTitle>
 					<Link href='/'>Vancouver Local Shop</Link>
-				</h1>
-			</li>
+				</NavTitle>
+			</NavItem>
 
-			<li className='nav-item'>
+			<NavItem>
 				<Link href='/about'>About</Link>
-			</li>
+			</NavItem>
 
-			<li className='nav-item'>
+			<NavItem>
 				<Link href='/contact'>Contact</Link>
-			</li>
-		</ul>
+			</NavItem>
+		</NavList>
 	</NavWrapper>
 );
 

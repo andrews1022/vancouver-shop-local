@@ -1,8 +1,8 @@
 /* this file purely exists to see the colour squares in vs code */
 
 .colors {
-	color: #80ed99;
-	color: #57cc99;
-	color: #38a3a5;
-	color: #22577a;
+	color: #80ed99; /* lightGreen */
+	color: #57cc99; /* mediumAquamarine */
+	color: #38a3a5; /* scooter */
+	color: #22577a; /* bahamaBlue */
 }
