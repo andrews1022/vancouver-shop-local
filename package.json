@@ -5,13 +5,18 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"git:add": "git add .",
+		"git:commit": "git commit -m 'project updated'",
+		"git:push": "git push -u origin",
+		"git": "node git.js"
 	},
 	"dependencies": {
 		"@types/styled-components": "^5.1.15",
 		"next": "12.0.2",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
+		"shelljs": "^0.8.4",
 		"styled-components": "^5.3.3"
 	},
 	"devDependencies": {

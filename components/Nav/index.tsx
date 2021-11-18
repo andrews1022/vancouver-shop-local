@@ -12,7 +12,7 @@ const Nav = () => (
 		<NavList>
 			<NavItem>
 				<NavTitle>
-					<Link href='/'>Vancouver Local Shop</Link>
+					<Link href='/'>Vancouver Shop Local</Link>
 				</NavTitle>
 			</NavItem>
 
