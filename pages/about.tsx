@@ -1,13 +1,20 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
+// components
+import FiftyFifty from '../components/FiftyFifty';
+import FiftyFiftyBox from '../components/FiftyFiftyBox';
+
 // images
 import AboutImg from '../public/images/about.jpg';
 
 const About: NextPage = () => (
 	<>
-		<div className='fifty-fifty'>
-			<div className='fifty-fifty-box'>
+		<FiftyFifty>
+			<FiftyFiftyBox>
+				<Image src={AboutImg} alt='woman paying cashier in local business' />
+			</FiftyFiftyBox>
+			<FiftyFiftyBox>
 				<h1>What is Vancouver Shop Local?</h1>
 				<p>
 					Vancouver Shop Local is an effort that started on the{' '}
@@ -17,11 +24,9 @@ const About: NextPage = () => (
 					to help support local businesses in the Greater Vancouver Area during the holiday shopping
 					season, instead of buying from big chain retailors or online from sites like Amazon.
 				</p>
-			</div>
-			<div className='fifty-fifty-box'>
-				<Image src={AboutImg} alt='woman paying cashier in local business' />
-			</div>
-		</div>
+				<p>There you can also find the shop of the week and possibly some deals!</p>
+			</FiftyFiftyBox>
+		</FiftyFifty>
 	</>
 );
 

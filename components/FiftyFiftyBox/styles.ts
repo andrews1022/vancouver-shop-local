@@ -5,8 +5,16 @@ interface FiftyFiftyBoxWrapperProps {
 }
 
 const FiftyFiftyBoxWrapper = styled.div<FiftyFiftyBoxWrapperProps>`
-	background-color: ${(props) => (props.isFirstOnMobile ? 'lightgreen' : 'lightcoral')};
-	padding: 1rem;
+	flex: 0 0 48%;
+
+	a {
+		color: ${({ theme }) => theme.colors.bahamaBlue};
+		font-weight: 600;
+	}
 `;
 
 export default FiftyFiftyBoxWrapper;
+
+// @media ${({ theme }) => theme.mediaQueries.tabletMedium} {
+// 	padding: 0 ${({ theme }) => theme.spacing.mobile};
+// }

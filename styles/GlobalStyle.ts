@@ -31,6 +31,21 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  h1 {
+    color: ${theme.colors.scooter};
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 0.625rem;
+    }
+  }
+
   button, 
   input, 
   textarea {
@@ -51,10 +66,14 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
 
-    &:hover,
-    &:active {
-      outline: 0;
-    }
+    @media (hover) {
+			&:hover,
+			&:active,
+			&:focus {
+        outline: 0;
+				text-decoration: underline;
+			}
+		}
   }
 
   ol,

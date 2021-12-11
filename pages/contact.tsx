@@ -1,16 +1,20 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
+// components
+import FiftyFifty from '../components/FiftyFifty';
+import FiftyFiftyBox from '../components/FiftyFiftyBox';
+
 // images
 import ContactImg from '../public/images/contact.jpg';
 
 const Contact: NextPage = () => (
 	<>
-		<div className='fifty-fifty'>
-			<div className='fifty-fifty-box'>
+		<FiftyFifty>
+			<FiftyFiftyBox>
 				<Image src={ContactImg} alt='person accepting a package from a local business' />
-			</div>
-			<div className='fifty-fifty-box'>
+			</FiftyFiftyBox>
+			<FiftyFiftyBox>
 				<h1>Contact</h1>
 				<p>
 					For all contact related details, please see the post on the{' '}
@@ -23,8 +27,8 @@ const Contact: NextPage = () => (
 					</a>
 					.
 				</p>
-			</div>
-		</div>
+			</FiftyFiftyBox>
+		</FiftyFifty>
 	</>
 );
 

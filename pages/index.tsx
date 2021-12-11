@@ -6,6 +6,7 @@ import Image from 'next/image';
 import React from 'react';
 
 // components
+import Businesses from '../components/Businesses';
 import FiftyFifty from '../components/FiftyFifty';
 import FiftyFiftyBox from '../components/FiftyFiftyBox';
 
@@ -27,10 +28,12 @@ const Home: NextPage = () => (
 					Below, you’ll find a list of businesses/artists/crafters.
 				</p>
 			</FiftyFiftyBox>
-			<FiftyFiftyBox isFirstOnMobile>
+			<FiftyFiftyBox>
 				<Image src={HomeImg} alt='person accepting a package from a local business' />
 			</FiftyFiftyBox>
 		</FiftyFifty>
+
+		<Businesses />
 	</>
 );
 

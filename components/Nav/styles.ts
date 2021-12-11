@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
+// shared styles
+import { baseLayoutStyles } from '../../styles/lib';
+
 export const NavWrapper = styled.nav`
-	background-color: ${(props) => props.theme.colors.bahamaBlue};
-	color: ${(props) => props.theme.shades.white};
+	${baseLayoutStyles};
 `;
 
 export const NavList = styled.ul`
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-columns: repeat(12, 1fr);
-	padding: 1.25rem 7.5rem;
+	padding: 1.25rem ${({ theme }) => theme.spacing.leftRightDesktop};
 `;
 
 export const NavItem = styled.li`
@@ -18,13 +20,6 @@ export const NavItem = styled.li`
 	}
 
 	&:not(:first-child) {
-		@media (hover) {
-			&:hover,
-			&:active,
-			&:focus {
-				text-decoration: underline;
-			}
-		}
 	}
 `;
 
