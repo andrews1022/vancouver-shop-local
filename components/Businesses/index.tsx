@@ -1,7 +1,7 @@
 import React from 'react';
 
 // data
-import businessesData from '../../data/business';
+import businessesData from '../../data/businesses';
 
 interface BusinessesProps {}
 

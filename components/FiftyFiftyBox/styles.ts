@@ -11,6 +11,11 @@ const FiftyFiftyBoxWrapper = styled.div<FiftyFiftyBoxWrapperProps>`
 		color: ${({ theme }) => theme.colors.bahamaBlue};
 		font-weight: 600;
 	}
+
+	li {
+		list-style-type: disc;
+		margin-left: 1.25rem;
+	}
 `;
 
 export default FiftyFiftyBoxWrapper;

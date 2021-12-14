@@ -24,7 +24,12 @@ const About: NextPage = () => (
 					to help support local businesses in the Greater Vancouver Area during the holiday shopping
 					season, instead of buying from big chain retailors or online from sites like Amazon.
 				</p>
-				<p>There you can also find the shop of the week and possibly some deals!</p>
+				<p>There you can also find:</p>
+				<ul>
+					<li>Shop of the Week</li>
+					<li>Deals</li>
+					<li>Most up to date list of stores/businesses</li>
+				</ul>
 			</FiftyFiftyBox>
 		</FiftyFifty>
 	</>

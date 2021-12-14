@@ -78,6 +78,7 @@ const GlobalStyle = createGlobalStyle`
 
   ol,
   ul {
+    line-height: 1.5;
     list-style: none;
   }
 
