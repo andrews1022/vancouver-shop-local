@@ -186,7 +186,7 @@ const businessesData = [
 		category: 'Books'
 	},
 	{
-		name: 'Cyrus LongBones Series',
+		name: 'The Shitkickers',
 		description:
 			'Written by local author Jason Bryan, a tale of bike theft, manipulation, and corruption in Vancouver.',
 		link: 'https://www.shitkick.ca/',
@@ -509,7 +509,7 @@ const businessesData = [
 	{
 		name: 'Spirit Bear Coffee Company',
 		description:
-			'Coffee inspired by the creation story of the Spirit Bear – a symbolic gift of peace and harmony to all creatures.',
+			'Coffee inspired by the creation story of the Spirit Bear - a symbolic gift of peace and harmony to all creatures.',
 		link: 'https://spiritbearcoffeecompany.com/',
 		category: 'Food & Drinks'
 	},
@@ -583,9 +583,68 @@ const businessesData = [
 
 	// HOME & KITCHEN
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'Balco Life',
+		description: 'Bar tops that secure to your balcony to maximize your livable space.',
+		link: 'https://www.balcolife.com/',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'ChopxChop',
+		description:
+			'Laser engraved handmade chopping and charcuterie boards for the chef in your life.',
+		link: 'https://chopxchop.com/',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'Dzignworx',
+		description: 'Wood trays, flags, and drink accessories.',
+		link: 'https://dzignworx.com/',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'Fiber Doodle',
+		description:
+			'Handmade eco-friendly decor and fashion accessories made with cotton macrame ropes in Vancouver. Also selling DIY kits.',
+		link: 'https://www.instagram.com/fiberdoodle/?hl=en',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'Himmeloo',
+		description:
+			'Perfect for displaying air plants, moss or a beautiful hanging feature on their own. "Reddit15" for 15% off.',
+		link: 'https://www.himmeloo.com/',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'Make Nice Company',
+		description: "Plastic-Free Dish Soap to reduce world's consumption of single use plastics.",
+		link: 'https://makenicecompany.com/',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'Man-Cave Gifts & Collectibles',
+		description:
+			'Collectible Decor for your walls from LED Signs to Kit Cat Clocks. "REDDIT10" for 10% off at checkout.',
+		link: 'https://man-cave.ca/',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'MiMOKO',
+		description: 'Ceramic planters and vases.',
+		link: 'https://www.mimoko.me/',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'Mosquito Creek Pottery',
+		description:
+			'Handmade contemporary ceramics inspired by the West Coast. "REDDIT10" for 10% off.)',
+		link: 'https://www.etsy.com/ca/shop/MosquitoCreekPottery',
+		category: 'Home & Kitchen'
+	},
+	{
+		name: 'Valley Living Design',
+		description: 'Made to order wood shelving for your home.',
+		link: 'https://www.etsy.com/ca/shop/ValleyLivingDesign',
 		category: 'Home & Kitchen'
 	},
 
@@ -607,57 +666,149 @@ const businessesData = [
 
 	// MARKETPLACES
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'Bill Reid Gallery',
+		description:
+			"Northwest First Nations Art. Proceeds support local Indigenous artists and the Gallery's artistic & educational programs.",
+		link: 'https://www.billreidgallery.ca/collections/all-products-targeturl#targetUrl',
+		category: 'Marketplaces'
+	},
+	{
+		name: 'The Nooks',
+		description:
+			'Marketplace for home décor, soaps, clothes, basically anything that can be handmade. Locations in Gastown, Kits, and North Van.',
+		link: 'https://thenooks.ca/',
+		category: 'Marketplaces'
+	},
+	{
+		name: 'Loma',
+		description:
+			'Local online marketplace with fast, sustainable delivery. Order from various high-quality vendors throughout Greater Vancouver!',
+		link: 'https://shoploma.ca/',
+		category: 'Marketplaces'
+	},
+	{
+		name: 'North of Fifty',
+		description:
+			'Métis and First Nations inspired wearable art, Christmas ornaments, home decor, jewelry, and gift ideas.',
+		link: 'https://northoffifty.com/',
+		category: 'Marketplaces'
+	},
+	{
+		name: 'r/FirstNationsCanada',
+		description: 'Has their own Indigenous Holiday Shopping Guide for businesses across Canada.',
+		link: 'https://www.reddit.com/r/FirstNationsCanada/comments/qw315e/indigenous_holiday_shopping_guide/',
 		category: 'Marketplaces'
 	},
 
 	// PETS
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'Fresh Bark',
+		description:
+			'All natural dog treats like chicken, fishies, salmon, beef liver and sweet potato.',
+		link: 'https://www.freshbark.ca/',
+		category: 'Pets'
+	},
+	{
+		name: 'Living Life By Hand',
+		description: 'Custom pet portraits. Choose framed picture or stickers.',
+		link: 'https://www.etsy.com/shop/Livinglifebyhand',
+		category: 'Pets'
+	},
+	{
+		name: 'My Rainy Weekends',
+		description: 'Custom pet portraits through Instagram. Corgi themed everything on Society6.',
+		link: 'https://www.instagram.com/myrainyweekends/',
+		category: 'Pets'
+	},
+	{
+		name: 'Santa Paws Workshop',
+		description: 'High quality holiday stockings and accessories for furry family members.',
+		link: 'https://www.etsy.com/ca/shop/SantaPawsWorkshop',
+		category: 'Pets'
+	},
+	{
+		name: 'Strange Tails',
+		description:
+			'Dog collars and leashes made from leather and Biothane. Handcrafted locally in Vancouver.',
+		link: 'https://www.shopstrangetails.com/',
+		category: 'Pets'
+	},
+	{
+		name: 'The Track Trove',
+		description:
+			'Equestrian consignment. Everything you need to dress, ride, and saddle your horse.',
+		link: 'https://www.thetacktrove.ca/',
 		category: 'Pets'
 	},
 
 	// PHOTOGRAPHY
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'Ella Shirazi Photography',
+		description: 'Maternity, newborn, and baby photography services.',
+		link: 'https://www.ellashiraziphotography.com/',
+		category: 'Photography'
+	},
+	{
+		name: 'Melanie Chapman Photographer',
+		description:
+			'Book your shoots for: Wedding, engagement, couples, personal portraits, or family sessions.',
+		link: 'https://www.melaniechapmanphotography.ca/',
 		category: 'Photography'
 	},
 
 	// TECH & ELECTRONICS
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'Filmgear Canada',
+		description:
+			'Camera, lighting and film equipment store with largest selection of Aputure, Smallrig, Godox, Nanlite, and Tilta in town.',
+		link: 'https://filmgearcanada.com/',
 		category: 'Tech & Electronics'
 	},
 
 	// THINGS TO DO
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'The Home Key',
+		description:
+			'Coworking space for esports, tech & gaming startups. Drop-ins coming soon. "25OFFREDDIT" for 25% off first month.',
+		link: 'https://thehomekey.gg/',
 		category: 'Things to Do'
 	},
 
 	// VACATION
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'Skwachàys Lodge Aboriginal Hotel and Gallery',
+		description: 'Indigenous arts hotel featuring beautiful original Indigenous art.',
+		link: 'https://gallery.urbanaboriginal.org/',
 		category: 'Vacation'
 	},
 
 	// WELLNESS
 	{
-		name: 'NAME_HERE',
-		description: 'DESCRIPTION_HERE',
-		link: 'LINK_HERE',
+		name: 'Bursera',
+		description:
+			'Sustainable aromatherapy, tree planted with every order. Enter "REDDIT10" at checkout to save 10% on your order.',
+		link: 'https://bursera.ca/',
+		category: 'Wellness'
+	},
+	{
+		name: 'Kasih Kit',
+		description:
+			'Therapist-developed mental health kits & tools to help manage stress and maintain wellness. 10% off code "REDDIT10".',
+		link: 'https://kasih.ca/',
+		category: 'Wellness'
+	},
+	{
+		name: 'Pacific Coast Calm',
+		description:
+			'Products to inspire and promote wellbeing. Everything from crystal infusion essential oils to aromatherapy jewelry.',
+		link: 'https://pacificcoastcalm.com/',
+		category: 'Wellness'
+	},
+	{
+		name: 'The Travelling Hygienist',
+		description:
+			'A mobile dental hygiene clinic. Gift certificates for all treatments available. Mention Reddit for 10% off.',
+		link: 'https://www.thetravellinghygienist.com/',
 		category: 'Wellness'
 	}
 ];
