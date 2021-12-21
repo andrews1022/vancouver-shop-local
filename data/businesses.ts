@@ -1,12 +1,55 @@
 import { Business } from '../types/types';
 
 const businessesData: Business[] = [
+	// ACESSORIES
+	{
+		name: '4th + Fir Scrunchies',
+		description:
+			'Handcrafted high-quality hair scrunchies strong enough for anything life brings your way. "REDDIT10" for 10% off.',
+		link: 'https://www.4thfir.ca/',
+		category: 'Accessories'
+	},
+	{
+		name: 'Chi Em Moments',
+		description:
+			'Handcrafted accessories for your head. Fluffy bucket hats and colorful silk scrunchies.',
+		link: 'https://cmmclothing.com/',
+		category: 'Accessories'
+	},
+	{
+		name: 'Erin Templeton',
+		description:
+			'Leather bags and accessories made in Vancouver. Buy online or visit the store in Chinatown.',
+		link: 'https://www.erintempleton.com/',
+		category: 'Accessories'
+	},
+	{
+		name: 'Magic Pumpkin Creations',
+		description: 'Whimsical custom bags & accessories.',
+		link: 'https://www.etsy.com/shop/magicpumpkinboutique/',
+		category: 'Accessories'
+	},
+	{
+		name: 'Origin Columbia:',
+		description:
+			'Handmade Wayuu bags from Colombia. Each bag is made by women from the indigenous Wayuu tribe from La Guajira.',
+		link: 'https://origincolombia.com/',
+		category: 'Accessories'
+	},
+
 	// ART
 	{
 		name: 'a . cassidy',
 		description:
 			'Visual artist selling prints and original art. Commissions open for clothing/fabric pieces.',
 		link: 'https://acassidy.ca/',
+		category: 'Art'
+	},
+	{
+		name: 'AlpineglowPrints',
+		description:
+			'Vibrant minimalist art prints of iconic BC landscapes for the outdoorsperson on your list. Use "Reddit10" for 10% off',
+		link: 'https://www.etsy.com/shop/alpenglowprints/',
 		category: 'Art'
 	},
 	{
@@ -23,10 +66,23 @@ const businessesData: Business[] = [
 		category: 'Art'
 	},
 	{
+		name: 'Deville Shadowboxes',
+		description: "Shadowboxes inspired by Vancouver's street patterns.",
+		link: 'https://devilleshop.com/',
+		category: 'Art'
+	},
+	{
 		name: 'Emily Story',
 		description:
 			'Kewpie inspired custom portraits and traditional tattoo inspired art. Get them as stickers or prints.',
 		link: 'https://ivepaidforworse.bigcartel.com/',
+		category: 'Art'
+	},
+	{
+		name: 'Ettennarts',
+		description:
+			'Original acrylic paintings inspired by nature. Also selling wood slice Christmas ornaments (set of 6).',
+		link: 'https://www.etsy.com/ca/shop/ettennarts',
 		category: 'Art'
 	},
 	{
@@ -58,10 +114,17 @@ const businessesData: Business[] = [
 		category: 'Art'
 	},
 	{
-		name: 'Thorain Art & Illustration',
+		name: 'Mighty Marmot Art',
 		description:
-			'Art prints, stickers and stationery sets inspired by cottagecore and vintage fairytales.',
-		link: 'https://www.etsy.com/ca/shop/thorain',
+			'"Reddit20" for 20% off original paintings of iconic Vancouver locations. Greeting cards and commissions also available.',
+		link: 'https://mightymarmot.com/',
+		category: 'Art'
+	},
+	{
+		name: 'Nature of Vancouver',
+		description:
+			'Original watercolour paintings inspired by Vancouver scenery. Inquire about purchases through Instagram.',
+		link: 'https://www.instagram.com/natureofvancouver/',
 		category: 'Art'
 	},
 	{
@@ -71,57 +134,12 @@ const businessesData: Business[] = [
 		link: 'https://www.etsy.com/shop/retrophiliac',
 		category: 'Art'
 	},
-
-	// ART - LANDSCAPES
 	{
-		name: 'AlpineglowPrints',
+		name: 'Thorain Art & Illustration',
 		description:
-			'Vibrant minimalist art prints of iconic BC landscapes for the outdoorsperson on your list. Use "Reddit10" for 10% off',
-		link: 'https://www.etsy.com/shop/alpenglowprints/',
-		category: 'Art - Landscapes'
-	},
-	{
-		name: 'Deville Shadowboxes',
-		description: "Shadowboxes inspired by Vancouver's street patterns.",
-		link: 'https://devilleshop.com/',
-		category: 'Art - Landscapes'
-	},
-	{
-		name: 'Ettennarts',
-		description:
-			'Original acrylic paintings inspired by nature. Also selling wood slice Christmas ornaments (set of 6).',
-		link: 'https://www.etsy.com/ca/shop/ettennarts',
-		category: 'Art - Landscapes'
-	},
-	{
-		name: 'Mighty Marmot Art',
-		description:
-			'"Reddit20" for 20% off original paintings of iconic Vancouver locations. Greeting cards and commissions also available.',
-		link: 'https://mightymarmot.com/',
-		category: 'Art - Landscapes'
-	},
-	{
-		name: 'Nature of Vancouver',
-		description:
-			'Original watercolour paintings inspired by Vancouver scenery. Inquire about purchases through Instagram.',
-		link: 'https://www.instagram.com/natureofvancouver/',
-		category: 'Art - Landscapes'
-	},
-
-	// ART - PHOTOGRAPHY
-	{
-		name: 'Dano Pendygrasse',
-		description:
-			'Vancouver photographer specializing in snowboarding & iconic Vancouver locations.',
-		link: 'https://www.danopendygrasse.store/',
-		category: 'Art - Photography'
-	},
-	{
-		name: 'Tristan Todd Photography',
-		description:
-			'Local photographer selling his work as a calendar. You can also buy individual prints off his website.',
-		link: 'https://www.tristantodd.photography/',
-		category: 'Art - Photography'
+			'Art prints, stickers and stationery sets inspired by cottagecore and vintage fairytales.',
+		link: 'https://www.etsy.com/ca/shop/thorain',
+		category: 'Art'
 	},
 
 	// BATH & COSMETICS
@@ -247,217 +265,107 @@ const businessesData: Business[] = [
 		category: 'Craft'
 	},
 
-	// FASHION - ACESSORIES
-	{
-		name: '4th + Fir Scrunchies',
-		description:
-			'Handcrafted high-quality hair scrunchies strong enough for anything life brings your way. "REDDIT10" for 10% off.',
-		link: 'https://www.4thfir.ca/',
-		category: 'Fashion - Accessories'
-	},
-	{
-		name: 'Chi Em Moments',
-		description:
-			'Handcrafted accessories for your head. Fluffy bucket hats and colorful silk scrunchies.',
-		link: 'https://cmmclothing.com/',
-		category: 'Fashion - Accessories'
-	},
-	{
-		name: 'Erin Templeton',
-		description:
-			'Leather bags and accessories made in Vancouver. Buy online or visit the store in Chinatown.',
-		link: 'https://www.erintempleton.com/',
-		category: 'Fashion - Accessories'
-	},
-	{
-		name: 'Magic Pumpkin Creations',
-		description: 'Whimsical custom bags & accessories.',
-		link: 'https://www.etsy.com/shop/magicpumpkinboutique/',
-		category: 'Fashion - Accessories'
-	},
-	{
-		name: 'Origin Columbia:',
-		description:
-			'Handmade Wayuu bags from Colombia. Each bag is made by women from the indigenous Wayuu tribe from La Guajira.',
-		link: 'https://origincolombia.com/',
-		category: 'Fashion - Accessories'
-	},
-
-	// FASHION - CLOTHING BASICS
+	// FASHION
 	{
 		name: 'Be The Roster',
 		description: 'Everyday basics and lounge wear for women.',
 		link: 'https://betheroster.com/',
-		category: 'Fashion - Clothing Basics'
+		category: 'Fashion'
 	},
 	{
 		name: 'CMFT Clothing',
 		description: 'A brand that promotes seeking comfort within yourself.',
 		link: 'https://cmftclothing.com/',
-		category: 'Fashion - Clothing Basics'
+		category: 'Fashion'
+	},
+	{
+		name: 'Coeva Vintage',
+		description:
+			'Be & wear a work of art. Curated vintage & modern clothing for sustainable style seekers.',
+		link: 'https://coevavintage.com/',
+		category: 'Fashion'
+	},
+
+	{
+		name: 'Faulkner',
+		description:
+			'Online archive/designer & vintage clothing store. Niche Japanese brands, well-known European labels, and vintage Americana.',
+		link: 'https://shopfaulkner.ca/',
+		category: 'Fashion'
 	},
 	{
 		name: 'Finnley',
 		description:
 			'Sustainable, quality clothing designed to outlive trends by creating wardrobe staples.',
 		link: 'https://www.wearefinnley.com/',
-		category: 'Fashion - Clothing Basics'
-	},
-	{
-		name: "My Sister's Closet",
-		description:
-			'Social conscious fashion focusing on sustainability. Partial revenue goes towards Battered Womens Support Services.',
-		link: 'https://mysistersclosetvancouver.shop/',
-		category: 'Fashion - Clothing Basics'
-	},
-	{
-		name: 'Nth Degree Underwear',
-		description: 'Men\'s underwear and loungewear. Use code "REDDIT15" for 15% off.',
-		link: 'https://nthdegreeunderwear.ca/',
-		category: 'Fashion - Clothing Basics'
-	},
-	{
-		name: 'Rummage',
-		description:
-			'Community thrift store focusing on fostering creativity, community and affordable. Clothes and other unique finds.',
-		link: 'https://www.instagram.com/thriftrummage/',
-		category: 'Fashion - Clothing Basics'
-	},
-
-	// FASHION - CLOTHING STATEMENTS
-	{
-		name: 'Coeva Vintage',
-		description:
-			'Be & wear a work of art. Curated vintage & modern clothing for sustainable style seekers.',
-		link: 'https://coevavintage.com/',
-		category: 'Fashion - Clothing Statements'
-	},
-	{
-		name: 'Faulkner',
-		description:
-			'Online archive/designer & vintage clothing store. Niche Japanese brands, well-known European labels, and vintage Americana.',
-		link: 'https://shopfaulkner.ca/',
-		category: 'Fashion - Clothing Statements'
+		category: 'Fashion'
 	},
 	{
 		name: 'Lace Embrace',
 		description:
 			'Beautiful corsets, lingerie, and accessories. Brick & Mortar shop on East 16th & Main.',
 		link: 'https://www.laceembrace.com/',
-		category: 'Fashion - Clothing Statements'
+		category: 'Fashion'
 	},
 	{
 		name: 'Linesix Clothing',
 		description: 'Tailored unisex Vancouver streetwear. Use "Reddit" for 15% off.',
 		link: 'https://linesix.ca/',
-		category: 'Fashion - Clothing Statements'
+		category: 'Fashion'
+	},
+	{
+		name: "My Sister's Closet",
+		description:
+			'Social conscious fashion focusing on sustainability. Partial revenue goes towards Battered Womens Support Services.',
+		link: 'https://mysistersclosetvancouver.shop/',
+		category: 'Fashion'
 	},
 	{
 		name: 'New World Designs',
 		description:
 			'Pinup, retro, and alternative fashion from daily clothing to statement piece accessories.',
 		link: 'https://www.pinupcanada.com/',
-		category: 'Fashion - Clothing Statements'
+		category: 'Fashion'
 	},
 	{
-		name: 'Threads of Apollo',
-		description: 'Made to order eco-friendly leather jackets.',
-		link: 'https://threadsofapollo.com/',
-		category: 'Fashion - Clothing Statements'
+		name: 'Nth Degree Underwear',
+		description: 'Men\'s underwear and loungewear. Use code "REDDIT15" for 15% off.',
+		link: 'https://nthdegreeunderwear.ca/',
+		category: 'Fashion'
 	},
-
-	// FASHION - JEWELRY
 	{
-		name: 'Abbey Park',
+		name: 'Rummage',
 		description:
-			'Handcrafted Jewerly: Handcrafted minimal and personalized jewelry, made in small batches.',
-		link: 'https://www.etsy.com/shop/AbbeyPark',
-		category: 'Fashion - Jewelry'
+			'Community thrift store focusing on fostering creativity, community and affordable. Clothes and other unique finds.',
+		link: 'https://www.instagram.com/thriftrummage/',
+		category: 'Fashion'
 	},
-	{
-		name: 'AMLiora Designs',
-		description: 'Resin jewelry inspired by nature, featuring pressed flowers in necklaces.',
-		link: 'https://www.amliora.com/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Hunt of Hounds',
-		description: 'Handmade jewelry that tells a story. "Reddit10" for 10% off.',
-		link: 'https://huntofhounds.com/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Juliet925',
-		description:
-			'Hand forged sterling silver jewelry. Use "REDDIT10$" for 10 dollars off your first regularly priced order.',
-		link: 'https://www.juliet925.ca/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Leah Yard Designs',
-		description: 'Modern, affordable jewelry pieces.',
-		link: 'https://leahyarddesigns.com/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Monday May Jewelry',
-		description: 'Hand-Crafted Jewelry rich with culture.',
-		link: 'https://mondaymayjewelry.com/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Moonstone',
-		description:
-			'Ethical designer jewelry and handmade beaded designs, in Burnaby Heights. Say you found us on Reddit and get 10% off in-store!',
-		link: 'https://www.instagram.com/moonstonebc/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Nodantur Jewelry',
-		description:
-			'Unique micro-macrame jewelry in Celtic and Elven style. Also accessories like Christmas ornaments and bookmarks.',
-		link: 'https://www.etsy.com/shop/nodanturjewelry/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Perching Clay Art',
-		description:
-			'Handcrafted polymer clay wearable and decorative art. Use "street10" to get 10% off your order.',
-		link: 'https://www.perchingclayart.com/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Petal & Posy',
-		description:
-			'Small batch handcrafted polymer jewelry with a bespoke, retro feel. 15% with code "REDDIT15".',
-		link: 'https://shoppetalandposy.com/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: "Sam's Handmade Creations",
-		description: 'Handmade jewelry made with love. Each piece is unique.',
-		link: 'https://www.instagram.com/sams.handmade.creations/',
-		category: 'Fashion - Jewelry'
-	},
-	{
-		name: 'Thé Vert Jewellery',
-		description: 'Modern Handmade Japanese Jewelry. REDDIT15 for 15% off.',
-		link: 'https://www.thevert-jewellery.com/',
-		category: 'Fashion - Jewelry'
-	},
-
-	// FASHION - SPECIALITY/OUTDOORS
 	{
 		name: 'Search & Rescue Denim Co',
 		description: 'Premium, hand made and customizable aprons for home chefs, bartenders, and more.',
 		link: 'https://searchandrescuedenim.com/',
-		category: 'Fashion - Speciality/Outdoors'
+		category: 'Fashion'
 	},
 	{
 		name: 'Sidechannel',
 		description: 'Overalls designed for ski/snowboarding & fishing waders.',
 		link: 'https://www.sidechannel.ca/',
-		category: 'Fashion - Speciality/Outdoors'
+		category: 'Fashion'
+	},
+	{
+		name: 'Threads of Apollo',
+		description: 'Made to order eco-friendly leather jackets.',
+		link: 'https://threadsofapollo.com/',
+		category: 'Fashion'
+	},
+
+	// FILM EQUIPMENT
+	{
+		name: 'Filmgear Canada',
+		description:
+			'Camera, lighting and film equipment store with largest selection of Aputure, Smallrig, Godox, Nanlite, and Tilta in town.',
+		link: 'https://filmgearcanada.com/',
+		category: 'Film Equipment'
 	},
 
 	// FOOD & DRINKS
@@ -650,6 +558,86 @@ const businessesData: Business[] = [
 		category: 'Home & Kitchen'
 	},
 
+	// JEWELRY
+	{
+		name: 'Abbey Park',
+		description:
+			'Handcrafted Jewerly: Handcrafted minimal and personalized jewelry, made in small batches.',
+		link: 'https://www.etsy.com/shop/AbbeyPark',
+		category: 'Jewelry'
+	},
+	{
+		name: 'AMLiora Designs',
+		description: 'Resin jewelry inspired by nature, featuring pressed flowers in necklaces.',
+		link: 'https://www.amliora.com/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Hunt of Hounds',
+		description: 'Handmade jewelry that tells a story. "Reddit10" for 10% off.',
+		link: 'https://huntofhounds.com/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Juliet925',
+		description:
+			'Hand forged sterling silver jewelry. Use "REDDIT10$" for 10 dollars off your first regularly priced order.',
+		link: 'https://www.juliet925.ca/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Leah Yard Designs',
+		description: 'Modern, affordable jewelry pieces.',
+		link: 'https://leahyarddesigns.com/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Monday May Jewelry',
+		description: 'Hand-Crafted Jewelry rich with culture.',
+		link: 'https://mondaymayjewelry.com/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Moonstone',
+		description:
+			'Ethical designer jewelry and handmade beaded designs, in Burnaby Heights. Say you found us on Reddit and get 10% off in-store!',
+		link: 'https://www.instagram.com/moonstonebc/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Nodantur Jewelry',
+		description:
+			'Unique micro-macrame jewelry in Celtic and Elven style. Also accessories like Christmas ornaments and bookmarks.',
+		link: 'https://www.etsy.com/shop/nodanturjewelry/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Perching Clay Art',
+		description:
+			'Handcrafted polymer clay wearable and decorative art. Use "street10" to get 10% off your order.',
+		link: 'https://www.perchingclayart.com/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Petal & Posy',
+		description:
+			'Small batch handcrafted polymer jewelry with a bespoke, retro feel. 15% with code "REDDIT15".',
+		link: 'https://shoppetalandposy.com/',
+		category: 'Jewelry'
+	},
+	{
+		name: "Sam's Handmade Creations",
+		description: 'Handmade jewelry made with love. Each piece is unique.',
+		link: 'https://www.instagram.com/sams.handmade.creations/',
+		category: 'Jewelry'
+	},
+	{
+		name: 'Thé Vert Jewellery',
+		description: 'Modern Handmade Japanese Jewelry. REDDIT15 for 15% off.',
+		link: 'https://www.thevert-jewellery.com/',
+		category: 'Jewelry'
+	},
+
 	// LITERARY
 	{
 		name: 'Autmog',
@@ -745,6 +733,13 @@ const businessesData: Business[] = [
 
 	// PHOTOGRAPHY
 	{
+		name: 'Dano Pendygrasse',
+		description:
+			'Vancouver photographer specializing in snowboarding & iconic Vancouver locations.',
+		link: 'https://www.danopendygrasse.store/',
+		category: 'Photography'
+	},
+	{
 		name: 'Ella Shirazi Photography',
 		description: 'Maternity, newborn, and baby photography services.',
 		link: 'https://www.ellashiraziphotography.com/',
@@ -758,13 +753,12 @@ const businessesData: Business[] = [
 		category: 'Photography'
 	},
 
-	// TECH & ELECTRONICS
 	{
-		name: 'Filmgear Canada',
+		name: 'Tristan Todd Photography',
 		description:
-			'Camera, lighting and film equipment store with largest selection of Aputure, Smallrig, Godox, Nanlite, and Tilta in town.',
-		link: 'https://filmgearcanada.com/',
-		category: 'Tech & Electronics'
+			'Local photographer selling his work as a calendar. You can also buy individual prints off his website.',
+		link: 'https://www.tristantodd.photography/',
+		category: 'Photography'
 	},
 
 	// THINGS TO DO

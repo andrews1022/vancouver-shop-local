@@ -13,6 +13,7 @@ export const FilterWrapper = styled.div`
 `;
 
 export const FilterHeading = styled.h2`
+	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 `;
 
@@ -22,9 +23,7 @@ export const FilterList = styled.ul`
 	gap: 1rem;
 `;
 
-export const FilterItem = styled.li`
-	margin-bottom: 0.5rem;
-`;
+export const FilterItem = styled.li``;
 
 export const FilterLabel = styled.label`
 	display: flex;
@@ -50,10 +49,12 @@ export const BusinessesItem = styled.li`
 	padding: 0.75rem;
 `;
 
-export const BusinessesHeading = styled.h3``;
+export const BusinessesHeading = styled.h3`
+	font-size: 1.25rem;
+`;
 
 export const BusinessesDescription = styled.p``;
 
-export const BusinessesCategory = styled.span``;
+export const BusinessesCategory = styled.div``;
 
 export const BusinessesLink = styled.a``;

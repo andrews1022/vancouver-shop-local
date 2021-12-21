@@ -21,14 +21,6 @@ type BusinessActions =
 	| { type: 'RESET_BUSINESSES' }
 	| { type: 'SET_FILTERS'; payload: string };
 
-const getFilteredBusinesses = (filters: string[]): Business[] => {
-	if (!filters.length) {
-		return businessesData;
-	}
-
-	return businessesData.filter((business) => filters.includes(business.category));
-};
-
 export const businessesReducer = (
 	state: InitialBusinessesState = initialState,
 	action: BusinessActions
@@ -44,7 +36,9 @@ export const businessesReducer = (
 		case 'RENDER_BUSINESSES': {
 			return {
 				...state,
-				businesses: getFilteredBusinesses(state.filters)
+				businesses: !state.filters.length
+					? businessesData
+					: businessesData.filter((business) => state.filters.includes(business.category))
 			};
 		}
 

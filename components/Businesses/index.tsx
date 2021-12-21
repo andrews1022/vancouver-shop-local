@@ -1,7 +1,17 @@
 import React, { useReducer } from 'react';
 
+// font awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
 // data
 import businessesData from '../../data/businesses';
+
+// utils
+import renderCategoryIcon from '../../utils/renderCategoryIcon';
+
+// reducer
+import { businessesReducer, initialState } from './reducer';
 
 // styled components
 import {
@@ -20,12 +30,6 @@ import {
 	BusinessesLink,
 	BusinessesList
 } from './styles';
-
-// reducer
-import { businessesReducer, initialState } from './reducer';
-
-// props
-// interface BusinessesProps {}
 
 const Businesses = () => {
 	// reducer state
@@ -47,7 +51,7 @@ const Businesses = () => {
 		if (state.filters.includes(value)) {
 			const matchingIndex = state.filters.indexOf(value);
 
-			// remove it, and filter posts accordingly
+			// remove it, and filter businesses accordingly
 			if (matchingIndex > -1) {
 				dispatch({ type: 'REMOVE_FILTER', payload: value });
 				dispatch({ type: 'RENDER_BUSINESSES' });
@@ -57,7 +61,7 @@ const Businesses = () => {
 		}
 
 		// if user clicks on a department filter not in use,
-		// add to list of filters and filter posts accordingly
+		// add to list of filters and filter businesses accordingly
 		dispatch({ type: 'SET_FILTERS', payload: value });
 		dispatch({ type: 'RENDER_BUSINESSES' });
 	};
@@ -89,8 +93,14 @@ const Businesses = () => {
 						<BusinessesItem key={business.name}>
 							<BusinessesHeading>{business.name}</BusinessesHeading>
 							<BusinessesDescription>{business.description}</BusinessesDescription>
-							<BusinessesCategory>{business.category}</BusinessesCategory>
-							<BusinessesLink href={business.link}>Visit Site</BusinessesLink>
+							<BusinessesCategory>
+								{business.category}
+								<FontAwesomeIcon icon={renderCategoryIcon(business.category)} size='1x' />
+							</BusinessesCategory>
+							<BusinessesLink href={business.link} target='_blank' rel='noopener noreferrer'>
+								Visit Site
+								<FontAwesomeIcon icon={faChevronRight} size='1x' />
+							</BusinessesLink>
 						</BusinessesItem>
 					))}
 				</BusinessesList>
