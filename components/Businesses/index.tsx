@@ -1,4 +1,7 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
+
+// components
+import FilterItem from '../FilterItem';
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,11 +21,11 @@ import {
 	BusinessesWrapper,
 	FilterWrapper,
 	FilterHeading,
-	FilterItem,
+	// FilterItem,
 	FilterList,
 	Wrapper,
-	FilterCheck,
-	FilterLabel,
+	// FilterCheck,
+	// FilterLabel,
 	BusinessesCategory,
 	BusinessesDescription,
 	BusinessesHeading,
@@ -32,6 +35,9 @@ import {
 } from './styles';
 
 const Businesses = () => {
+	// simple state
+	// const [isChecked, setIsChecked] = useState(false);
+
 	// reducer state
 	const [state, dispatch] = useReducer(businessesReducer, initialState);
 
@@ -72,17 +78,7 @@ const Businesses = () => {
 				<FilterHeading>Filter by Category:</FilterHeading>
 				<FilterList>
 					{categories.map((category) => (
-						<FilterItem key={category}>
-							<FilterLabel htmlFor={`Category Filter ${category}`}>
-								<FilterCheck
-									id={`Category Filter ${category}`}
-									onClick={setFilters}
-									type='checkbox'
-									value={category}
-								/>
-								{category}
-							</FilterLabel>
-						</FilterItem>
+						<FilterItem key={category} category={category} setFilters={setFilters} />
 					))}
 				</FilterList>
 			</FilterWrapper>

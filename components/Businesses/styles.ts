@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
 	padding: 1.5% ${(props) => props.theme.spacing.leftRightDesktop};
 `;
 
-// filter
 export const FilterWrapper = styled.div`
 	margin-bottom: 1.5rem;
 `;
@@ -23,20 +22,6 @@ export const FilterList = styled.ul`
 	gap: 1rem;
 `;
 
-export const FilterItem = styled.li``;
-
-export const FilterLabel = styled.label`
-	display: flex;
-	align-items: center;
-	border: 2px solid red;
-	padding: 0.5rem 1rem;
-`;
-
-export const FilterCheck = styled.input`
-	margin-right: 0.5rem;
-`;
-
-// cards
 export const BusinessesWrapper = styled.div``;
 
 export const BusinessesList = styled.ul`
