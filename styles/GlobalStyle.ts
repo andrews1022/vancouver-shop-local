@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @media ${theme.mediaQueries.tabletLandscape} {
-      font-size: 75%;
+      font-size: 81.25%;
     }
   }
 
