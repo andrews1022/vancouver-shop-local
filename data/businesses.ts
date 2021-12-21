@@ -1,4 +1,6 @@
-const businessesData = [
+import { Business } from '../types/types';
+
+const businessesData: Business[] = [
 	// ART
 	{
 		name: 'a . cassidy',
