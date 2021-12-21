@@ -10,10 +10,11 @@ export const FilterItemWrapper = styled.li``;
 export const FilterLabel = styled.label<FilterLabelProps>`
 	display: flex;
 	align-items: center;
-	background-color: ${(props) =>
-		props.isChecked ? props.theme.colors.mediumAquamarine : 'transparent'};
-	border: 2px solid ${(props) => props.theme.colors.mediumAquamarine};
+	background-color: ${({ isChecked, theme }) =>
+		isChecked ? theme.colors.mediumAquamarine : 'transparent'};
+	border: 0.125rem solid ${({ theme }) => theme.colors.mediumAquamarine};
 	padding: 0.5rem 1rem;
+	transition: ${({ theme }) => theme.transitions.standardTransition};
 `;
 
 export const FilterCheck = styled.input`

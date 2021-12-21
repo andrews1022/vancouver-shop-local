@@ -10,6 +10,9 @@ import Businesses from '../components/Businesses';
 import FiftyFifty from '../components/FiftyFifty';
 import FiftyFiftyBox from '../components/FiftyFiftyBox';
 
+// data
+import { threadSlug } from '../data/constants';
+
 // images
 import HomeImg from '../public/images/home.jpg';
 
@@ -20,7 +23,7 @@ const Home: NextPage = () => (
 				<h1>Welcome to Vancouver Shop Local!</h1>
 				<p>
 					Vancouver Shop Local is an effort that started on the{' '}
-					<a href='https://www.reddit.com/r/vancouver/' target='_blank' rel='noopener noreferrer'>
+					<a href={threadSlug} target='_blank' rel='noopener noreferrer'>
 						Vancouver subreddit
 					</a>{' '}
 					to help support local businesses in the Greater Vancouver Area during the holiday shopping
@@ -28,7 +31,7 @@ const Home: NextPage = () => (
 					Below, you’ll find a list of businesses/artists/crafters.
 				</p>
 			</FiftyFiftyBox>
-			<FiftyFiftyBox>
+			<FiftyFiftyBox isFirstOnMobile>
 				<Image src={HomeImg} alt='person accepting a package from a local business' />
 			</FiftyFiftyBox>
 		</FiftyFifty>

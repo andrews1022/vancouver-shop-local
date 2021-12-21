@@ -6,6 +6,10 @@ import { baseLayoutStyles } from '../../styles/lib';
 export const FooterWrapper = styled.footer`
 	${baseLayoutStyles};
 	padding: 2.5rem ${({ theme }) => theme.spacing.leftRightDesktop};
+
+	@media ${({ theme }) => theme.mediaQueries.tabletPortrait} {
+		margin-top: auto;
+	}
 `;
 
 export const Row = styled.div`
@@ -13,7 +17,21 @@ export const Row = styled.div`
 	justify-content: space-between;
 `;
 
-export const Box = styled.div``;
+export const Box = styled.div`
+	&:first-child {
+		@media ${({ theme }) => theme.mediaQueries.tabletPortrait} {
+			flex: 1;
+			margin-bottom: 3.5%;
+			text-align: center;
+		}
+	}
+
+	&:last-child {
+		@media ${({ theme }) => theme.mediaQueries.tabletPortrait} {
+			display: none;
+		}
+	}
+`;
 
 export const Title = styled.span`
 	font-size: 1.25rem;

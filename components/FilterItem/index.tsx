@@ -5,6 +5,7 @@ import { FilterCheck, FilterItemWrapper, FilterLabel } from './styles';
 
 interface FilterItemProps {
 	category: string;
+	// eslint-disable-next-line no-unused-vars
 	setFilters: (event: React.MouseEvent<HTMLInputElement>) => void;
 }
 

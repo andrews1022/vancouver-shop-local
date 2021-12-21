@@ -9,6 +9,7 @@ export const NavWrapper = styled.nav`
 
 export const NavList = styled.ul`
 	${baseGridStyles};
+	align-items: center;
 	padding: 1.25rem ${({ theme }) => theme.spacing.leftRightDesktop};
 `;
 

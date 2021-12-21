@@ -17,6 +17,7 @@ const theme = {
 	},
 	shades: {
 		white: '#fff',
+		gainsboro: '#ddd',
 		black: '#000'
 	},
 	colors: {
@@ -38,6 +39,9 @@ const theme = {
 	},
 	spacing: {
 		leftRightDesktop: '6.5%'
+	},
+	transitions: {
+		standardTransition: 'all 175ms ease-in-out'
 	}
 };
 

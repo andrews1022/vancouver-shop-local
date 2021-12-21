@@ -5,6 +5,9 @@ import Image from 'next/image';
 import FiftyFifty from '../components/FiftyFifty';
 import FiftyFiftyBox from '../components/FiftyFiftyBox';
 
+// data
+import { threadSlug } from '../data/constants';
+
 // images
 import AboutImg from '../public/images/about.jpg';
 
@@ -18,7 +21,7 @@ const About: NextPage = () => (
 				<h1>What is Vancouver Shop Local?</h1>
 				<p>
 					Vancouver Shop Local is an effort that started on the{' '}
-					<a href='https://www.reddit.com/r/vancouver/' target='_blank' rel='noopener noreferrer'>
+					<a href={threadSlug} target='_blank' rel='noopener noreferrer'>
 						Vancouver subreddit
 					</a>{' '}
 					to help support local businesses in the Greater Vancouver Area during the holiday shopping

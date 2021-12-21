@@ -7,6 +7,11 @@ interface FiftyFiftyBoxWrapperProps {
 const FiftyFiftyBoxWrapper = styled.div<FiftyFiftyBoxWrapperProps>`
 	flex: 0 0 48%;
 
+	@media ${({ theme }) => theme.mediaQueries.tabletPortrait} {
+		order: ${({ isFirstOnMobile }) => (isFirstOnMobile ? -1 : 1)};
+		margin: 1rem 0;
+	}
+
 	a {
 		color: ${({ theme }) => theme.colors.bahamaBlue};
 		font-weight: 600;
@@ -19,7 +24,3 @@ const FiftyFiftyBoxWrapper = styled.div<FiftyFiftyBoxWrapperProps>`
 `;
 
 export default FiftyFiftyBoxWrapper;
-
-// @media ${({ theme }) => theme.mediaQueries.tabletMedium} {
-// 	padding: 0 ${({ theme }) => theme.spacing.mobile};
-// }

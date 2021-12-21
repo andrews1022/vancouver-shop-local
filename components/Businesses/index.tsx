@@ -1,11 +1,11 @@
-import React, { useReducer, useState } from 'react';
-
-// components
-import FilterItem from '../FilterItem';
+import React, { useReducer } from 'react';
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+// components
+import FilterItem from '../FilterItem';
 
 // data
 import businessesData from '../../data/businesses';
@@ -21,11 +21,8 @@ import {
 	BusinessesWrapper,
 	FilterWrapper,
 	FilterHeading,
-	// FilterItem,
 	FilterList,
 	Wrapper,
-	// FilterCheck,
-	// FilterLabel,
 	BusinessesCategory,
 	BusinessesDescription,
 	BusinessesHeading,
@@ -35,9 +32,6 @@ import {
 } from './styles';
 
 const Businesses = () => {
-	// simple state
-	// const [isChecked, setIsChecked] = useState(false);
-
 	// reducer state
 	const [state, dispatch] = useReducer(businessesReducer, initialState);
 
@@ -85,15 +79,15 @@ const Businesses = () => {
 
 			<BusinessesWrapper>
 				<BusinessesList>
-					{state.businesses.map((business) => (
-						<BusinessesItem key={business.name}>
-							<BusinessesHeading>{business.name}</BusinessesHeading>
-							<BusinessesDescription>{business.description}</BusinessesDescription>
+					{state.businesses.map(({ category, description, link, name }) => (
+						<BusinessesItem key={name}>
+							<BusinessesHeading>{name}</BusinessesHeading>
+							<BusinessesDescription>{description}</BusinessesDescription>
 							<BusinessesCategory>
-								{business.category}
-								<FontAwesomeIcon icon={renderCategoryIcon(business.category)} size='1x' />
+								{category}
+								<FontAwesomeIcon icon={renderCategoryIcon(category)} size='1x' />
 							</BusinessesCategory>
-							<BusinessesLink href={business.link} target='_blank' rel='noopener noreferrer'>
+							<BusinessesLink href={link} target='_blank' rel='noopener noreferrer'>
 								Visit Site
 								<FontAwesomeIcon icon={faChevronRight} size='1x' />
 							</BusinessesLink>

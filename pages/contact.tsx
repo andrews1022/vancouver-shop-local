@@ -5,6 +5,9 @@ import Image from 'next/image';
 import FiftyFifty from '../components/FiftyFifty';
 import FiftyFiftyBox from '../components/FiftyFiftyBox';
 
+// data
+import { threadSlug } from '../data/constants';
+
 // images
 import ContactImg from '../public/images/contact.jpg';
 
@@ -18,11 +21,7 @@ const Contact: NextPage = () => (
 				<h1>Contact</h1>
 				<p>
 					For all contact related details, please see the post on the{' '}
-					<a
-						href='https://www.reddit.com/r/vancouver/comments/qfxtlw/rvancouver_shop_local_holiday_guide_2021/'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
+					<a href={threadSlug} target='_blank' rel='noopener noreferrer'>
 						subreddit
 					</a>
 					.
