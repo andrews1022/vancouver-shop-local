@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useRef } from 'react';
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -32,6 +32,8 @@ import {
 } from './styles';
 
 const Businesses = () => {
+	const businessesWrapperRef = useRef<HTMLDivElement>(null);
+
 	// reducer state
 	const [state, dispatch] = useReducer(businessesReducer, initialState);
 
@@ -41,6 +43,13 @@ const Businesses = () => {
 	// set filters fn
 	const setFilters = (event: React.MouseEvent<HTMLInputElement>) => {
 		const { value } = event.currentTarget as HTMLInputElement;
+
+		const { innerWidth } = window;
+
+		if (innerWidth <= 480) {
+			// scroll cards into view
+			businessesWrapperRef.current?.scrollIntoView({ behavior: 'smooth' });
+		}
 
 		// if state is now empty as result of unchecking all boxes
 		if (!state.filters.length) {
@@ -77,7 +86,7 @@ const Businesses = () => {
 				</FilterList>
 			</FilterWrapper>
 
-			<BusinessesWrapper>
+			<BusinessesWrapper ref={businessesWrapperRef}>
 				<BusinessesList>
 					{state.businesses.map(({ category, description, link, name }) => (
 						<BusinessesItem key={name}>
