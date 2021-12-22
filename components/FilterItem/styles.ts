@@ -13,6 +13,7 @@ export const Label = styled.label<LabelProps>`
 	background-color: ${({ isChecked, theme }) =>
 		isChecked ? theme.colors.mediumAquamarine : 'transparent'};
 	border: 0.125rem solid ${({ theme }) => theme.colors.mediumAquamarine};
+	cursor: pointer;
 	padding: 0.5rem 1rem;
 	transition: ${({ theme }) => theme.transitions.standardTransition};
 `;
