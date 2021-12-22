@@ -3,47 +3,49 @@ import { Business } from '../types/types';
 const businessesData: Business[] = [
 	// ACESSORIES
 	{
-		name: '4th + Fir Scrunchies',
+		category: 'Accessories',
 		description:
 			'Handcrafted high-quality hair scrunchies strong enough for anything life brings your way. "REDDIT10" for 10% off.',
 		link: 'https://www.4thfir.ca/',
-		category: 'Accessories'
+		location: '1680 West 4th Avenue Vancouver, BC V6J 1L9',
+		name: '4th + Fir Scrunchies'
 	},
 	{
-		name: 'Chi Em Moments',
+		category: 'Accessories',
 		description:
 			'Handcrafted accessories for your head. Fluffy bucket hats and colorful silk scrunchies.',
 		link: 'https://cmmclothing.com/',
-		category: 'Accessories'
+		name: 'Chi Em Moments'
 	},
 	{
-		name: 'Erin Templeton',
+		category: 'Accessories',
 		description:
 			'Leather bags and accessories made in Vancouver. Buy online or visit the store in Chinatown.',
 		link: 'https://www.erintempleton.com/',
-		category: 'Accessories'
+		location: '511 Carrall St, Vancouver, BC V6B 2J8',
+		name: 'Erin Templeton'
 	},
 	{
-		name: 'Magic Pumpkin Creations',
+		category: 'Accessories',
 		description: 'Whimsical custom bags & accessories.',
 		link: 'https://www.etsy.com/shop/magicpumpkinboutique/',
-		category: 'Accessories'
+		name: 'Magic Pumpkin Creations'
 	},
 	{
-		name: 'Origin Columbia:',
+		category: 'Accessories',
 		description:
 			'Handmade Wayuu bags from Colombia. Each bag is made by women from the indigenous Wayuu tribe from La Guajira.',
 		link: 'https://origincolombia.com/',
-		category: 'Accessories'
+		name: 'Origin Columbia'
 	},
 
 	// ART
 	{
-		name: 'a . cassidy',
+		category: 'Art',
 		description:
 			'Visual artist selling prints and original art. Commissions open for clothing/fabric pieces.',
 		link: 'https://acassidy.ca/',
-		category: 'Art'
+		name: 'a . cassidy'
 	},
 	{
 		name: 'AlpineglowPrints',
@@ -100,7 +102,7 @@ const businessesData: Business[] = [
 		category: 'Art'
 	},
 	{
-		name: 'Justine Erickson Art',
+		name: 'Justin Erickson Art',
 		description:
 			'Local artist with a variety of original artworks, prints, greeting cards, and pins.',
 		link: 'https://justinericksonart.com/',
@@ -168,6 +170,7 @@ const businessesData: Business[] = [
 		name: 'Localbloom',
 		description: 'Over 110 brands of self-care & bath products, check out Localbloom on Broadway.',
 		link: 'https://localboom.ca/',
+		location: '504 E Broadway, Vancouver, BC V5T 3R4',
 		category: 'Bath & Cosmetics'
 	},
 	{
@@ -195,6 +198,7 @@ const businessesData: Business[] = [
 		name: 'SUVA Beauty',
 		description: 'Lush and vibrant cosmetics inspired by Fiji islands. "Reddit15" for 15% off.',
 		link: 'https://www.suvabeauty.com/en-ca',
+		location: '19288 22 Avenue, Surrey, BC V3Z 3S6',
 		category: 'Bath & Cosmetics'
 	},
 
@@ -285,12 +289,12 @@ const businessesData: Business[] = [
 		link: 'https://coevavintage.com/',
 		category: 'Fashion'
 	},
-
 	{
 		name: 'Faulkner',
 		description:
 			'Online archive/designer & vintage clothing store. Niche Japanese brands, well-known European labels, and vintage Americana.',
 		link: 'https://shopfaulkner.ca/',
+		location: '314 W Cordova St #307, Vancouver, BC V6B 1E8',
 		category: 'Fashion'
 	},
 	{
@@ -305,6 +309,7 @@ const businessesData: Business[] = [
 		description:
 			'Beautiful corsets, lingerie, and accessories. Brick & Mortar shop on East 16th & Main.',
 		link: 'https://www.laceembrace.com/',
+		location: '219 E 16th Ave, Vancouver, BC V5T 2T5',
 		category: 'Fashion'
 	},
 	{
@@ -325,6 +330,7 @@ const businessesData: Business[] = [
 		description:
 			'Pinup, retro, and alternative fashion from daily clothing to statement piece accessories.',
 		link: 'https://www.pinupcanada.com/',
+		location: '434 W Hastings St, Vancouver, BC V6B 1L1',
 		category: 'Fashion'
 	},
 	{
@@ -344,6 +350,7 @@ const businessesData: Business[] = [
 		name: 'Search & Rescue Denim Co',
 		description: 'Premium, hand made and customizable aprons for home chefs, bartenders, and more.',
 		link: 'https://searchandrescuedenim.com/',
+		location: '1359 Cartwright St #100, Vancouver, BC V6H 3R7',
 		category: 'Fashion'
 	},
 	{
@@ -365,6 +372,7 @@ const businessesData: Business[] = [
 		description:
 			'Camera, lighting and film equipment store with largest selection of Aputure, Smallrig, Godox, Nanlite, and Tilta in town.',
 		link: 'https://filmgearcanada.com/',
+		location: '945 E Cordova St #108, Vancouver, BC V6A 1H9',
 		category: 'Film Equipment'
 	},
 
@@ -373,13 +381,13 @@ const businessesData: Business[] = [
 		name: "BAK'D Cookies",
 		description:
 			'Local, high quality, and BIG 5oz Gourmet Cookies. Place an order and get it delivered. Use "Reddit10" for 10% off.',
-		link: 'https://bakdcookies.ca/66',
+		link: 'https://bakdcookies.ca/',
 		category: 'Food & Drinks'
 	},
 	{
 		name: "Bangin' Bannock",
 		description: 'Selling pre-mixed dry bannock mix.',
-		link: 'https://banginbannock.ca/collections/original-bannock-mix',
+		link: 'https://banginbannock.ca/',
 		category: 'Food & Drinks'
 	},
 	{
@@ -417,24 +425,34 @@ const businessesData: Business[] = [
 		category: 'Food & Drinks'
 	},
 	{
+		name: 'Shroom Stop',
+		description: 'Gourmet mushroom grow kits. Everything is locally sourced.',
+		link: 'https://www.shroomstop.ca/',
+		location: '1087 East Kent Ave N, Vancouver, BC V5X 4V9',
+		category: 'Food & Drinks'
+	},
+	{
 		name: 'Spirit Bear Coffee Company',
 		description:
 			'Coffee inspired by the creation story of the Spirit Bear - a symbolic gift of peace and harmony to all creatures.',
 		link: 'https://spiritbearcoffeecompany.com/',
+		location: '2071 Kingsway Ave Unit #111, Port Coquitlam, BC V3C 6N2',
 		category: 'Food & Drinks'
 	},
 	{
-		name: 'Susgrainable',
+		category: 'Food & Drinks',
 		description:
 			'Easy to make baking mixes that fight food waste. Use "REDDIT15" for 15% off. Gift boxes launching soon.',
 		link: 'https://susgrainable.com/',
-		category: 'Food & Drinks'
+		location: '150-1507 Powell Street, Vancouver, BC V5L 5C3',
+		name: 'Susgrainable'
 	},
 	{
-		name: 'Thomakis Real Greek Yogurt',
+		category: 'Food & Drinks',
 		description: 'Best Greek Yogurt in Vancouver. They do delivery & pickup.',
 		link: 'https://thomakis.com/',
-		category: 'Food & Drinks'
+		location: '8811 Laurel St #107, Vancouver, BC V6P 3V9',
+		name: 'Thomakis Real Greek Yogurt'
 	},
 	{
 		name: 'Vancity Milk Bombs',
@@ -461,6 +479,7 @@ const businessesData: Business[] = [
 		name: 'Rain City Games',
 		description: "Downtown Vancouver and New West's friendly local board game store!",
 		link: 'https://www.raincity.games/',
+		location: '88 W Pender St Unit 1069, Vancouver, BC V6B 6N9',
 		category: 'Games & Hobbies'
 	},
 
@@ -542,6 +561,7 @@ const businessesData: Business[] = [
 		name: 'MiMOKO',
 		description: 'Ceramic planters and vases.',
 		link: 'https://www.mimoko.me/',
+		location: '326 W 5th Ave, Vancouver, BC V5Y 3P1',
 		category: 'Home & Kitchen'
 	},
 	{
@@ -583,6 +603,7 @@ const businessesData: Business[] = [
 		description:
 			'Hand forged sterling silver jewelry. Use "REDDIT10$" for 10 dollars off your first regularly priced order.',
 		link: 'https://www.juliet925.ca/',
+		location: '23230 Billy Brown Rd #8, Langley, BC V1M 4G1',
 		category: 'Jewelry'
 	},
 	{
@@ -659,7 +680,8 @@ const businessesData: Business[] = [
 		name: 'Bill Reid Gallery',
 		description:
 			"Northwest First Nations Art. Proceeds support local Indigenous artists and the Gallery's artistic & educational programs.",
-		link: 'https://www.billreidgallery.ca/collections/all-products-targeturl#targetUrl',
+		link: 'https://www.billreidgallery.ca/',
+		location: '639 Hornby St, Vancouver, BC V6C 2G3',
 		category: 'Marketplaces'
 	},
 	{
@@ -737,12 +759,14 @@ const businessesData: Business[] = [
 		description:
 			'Vancouver photographer specializing in snowboarding & iconic Vancouver locations.',
 		link: 'https://www.danopendygrasse.store/',
+		location: '55 E Cordova St Vancouver, BC V6A 0A5',
 		category: 'Photography'
 	},
 	{
 		name: 'Ella Shirazi Photography',
 		description: 'Maternity, newborn, and baby photography services.',
 		link: 'https://www.ellashiraziphotography.com/',
+		location: '2632 Library Lane, North Vancouver, BC V7J 1S1',
 		category: 'Photography'
 	},
 	{
@@ -752,7 +776,6 @@ const businessesData: Business[] = [
 		link: 'https://www.melaniechapmanphotography.ca/',
 		category: 'Photography'
 	},
-
 	{
 		name: 'Tristan Todd Photography',
 		description:
@@ -767,6 +790,7 @@ const businessesData: Business[] = [
 		description:
 			'Coworking space for esports, tech & gaming startups. Drop-ins coming soon. "25OFFREDDIT" for 25% off first month.',
 		link: 'https://thehomekey.gg/',
+		location: '560 Seymour St Suite 2A, Vancouver, BC V6B 3J5',
 		category: 'Things to Do'
 	},
 
@@ -775,6 +799,7 @@ const businessesData: Business[] = [
 		name: 'Skwachàys Lodge Aboriginal Hotel and Gallery',
 		description: 'Indigenous arts hotel featuring beautiful original Indigenous art.',
 		link: 'https://gallery.urbanaboriginal.org/',
+		location: '29 West Pender Street, Vancouver, BC V6B 1R3',
 		category: 'Vacation'
 	},
 
@@ -798,6 +823,7 @@ const businessesData: Business[] = [
 		description:
 			'Products to inspire and promote wellbeing. Everything from crystal infusion essential oils to aromatherapy jewelry.',
 		link: 'https://pacificcoastcalm.com/',
+		location: '170-422 Richards St, Vancouver, BC V6B 2Z4',
 		category: 'Wellness'
 	},
 	{

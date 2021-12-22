@@ -8,26 +8,26 @@ import React from 'react';
 import { homeSlug, aboutSlug, contactSlug } from '../../data/constants';
 
 // styled components
-import { NavItem, NavList, NavTitle, NavWrapper } from './styles';
+import { Item, List, Title, Wrapper } from './styles';
 
 const Nav = () => (
-	<NavWrapper>
-		<NavList>
-			<NavItem>
-				<NavTitle>
+	<Wrapper>
+		<List>
+			<Item>
+				<Title>
 					<Link href={homeSlug}>Vancouver Shop Local</Link>
-				</NavTitle>
-			</NavItem>
+				</Title>
+			</Item>
 
-			<NavItem>
+			<Item>
 				<Link href={aboutSlug}>About</Link>
-			</NavItem>
+			</Item>
 
-			<NavItem>
+			<Item>
 				<Link href={contactSlug}>Contact</Link>
-			</NavItem>
-		</NavList>
-	</NavWrapper>
+			</Item>
+		</List>
+	</Wrapper>
 );
 
 export default Nav;

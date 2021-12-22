@@ -1,6 +1,12 @@
 import React from 'react';
 
-export type Children = React.ReactNode;
+export type Business = {
+	category: BusinessCategory;
+	description: string;
+	link: string;
+	location?: string;
+	name: string;
+};
 
 export type BusinessCategory =
 	| 'Accessories'
@@ -24,9 +30,6 @@ export type BusinessCategory =
 	| 'Vacation'
 	| 'Wellness';
 
-export type Business = {
-	name: string;
-	description: string;
-	link: string;
-	category: BusinessCategory;
-};
+export type Children = React.ReactNode;
+
+export type TagMode = 'category' | 'directions' | 'link';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // styled components
-import { FilterCheck, FilterItemWrapper, FilterLabel } from './styles';
+import { Check, Label, Wrapper } from './styles';
 
 interface FilterItemProps {
 	category: string;
@@ -13,9 +13,9 @@ const FilterItem = ({ category, setFilters }: FilterItemProps) => {
 	const [isChecked, setIsChecked] = useState(false);
 
 	return (
-		<FilterItemWrapper key={category}>
-			<FilterLabel htmlFor={`Category Filter ${category}`} isChecked={isChecked}>
-				<FilterCheck
+		<Wrapper>
+			<Label htmlFor={`Category Filter ${category}`} isChecked={isChecked}>
+				<Check
 					id={`Category Filter ${category}`}
 					onClick={(e) => {
 						setFilters(e);
@@ -25,8 +25,8 @@ const FilterItem = ({ category, setFilters }: FilterItemProps) => {
 					value={category}
 				/>
 				{category}
-			</FilterLabel>
-		</FilterItemWrapper>
+			</Label>
+		</Wrapper>
 	);
 };
 

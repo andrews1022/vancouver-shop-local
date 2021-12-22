@@ -1,35 +1,26 @@
 import React, { useReducer, useRef } from 'react';
 
-// font awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
 // components
+import BusinessesItem from '../BusinessesItem';
 import FilterItem from '../FilterItem';
 
 // data
 import businessesData from '../../data/businesses';
-
-// utils
-import renderCategoryIcon from '../../utils/renderCategoryIcon';
 
 // reducer
 import { businessesReducer, initialState } from './reducer';
 
 // styled components
 import {
+	BusinessesList,
 	BusinessesWrapper,
-	FilterWrapper,
 	FilterHeading,
 	FilterList,
-	Wrapper,
-	BusinessesCategory,
-	BusinessesDescription,
-	BusinessesHeading,
-	BusinessesItem,
-	BusinessesLink,
-	BusinessesList
+	FilterWrapper,
+	Wrapper
 } from './styles';
+
+// components
 
 const Businesses = () => {
 	const businessesWrapperRef = useRef<HTMLDivElement>(null);
@@ -88,19 +79,15 @@ const Businesses = () => {
 
 			<BusinessesWrapper ref={businessesWrapperRef}>
 				<BusinessesList>
-					{state.businesses.map(({ category, description, link, name }) => (
-						<BusinessesItem key={name}>
-							<BusinessesHeading>{name}</BusinessesHeading>
-							<BusinessesDescription>{description}</BusinessesDescription>
-							<BusinessesCategory>
-								{category}
-								<FontAwesomeIcon icon={renderCategoryIcon(category)} size='1x' />
-							</BusinessesCategory>
-							<BusinessesLink href={link} target='_blank' rel='noopener noreferrer'>
-								Visit Site
-								<FontAwesomeIcon icon={faChevronRight} size='1x' />
-							</BusinessesLink>
-						</BusinessesItem>
+					{state.businesses.map(({ category, description, link, location, name }) => (
+						<BusinessesItem
+							key={name}
+							category={category}
+							description={description}
+							link={link}
+							location={location}
+							name={name}
+						/>
 					))}
 				</BusinessesList>
 			</BusinessesWrapper>

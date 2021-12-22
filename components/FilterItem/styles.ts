@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 // props
-interface FilterLabelProps {
+interface LabelProps {
 	isChecked: boolean;
 }
 
-export const FilterItemWrapper = styled.li``;
+export const Wrapper = styled.li``;
 
-export const FilterLabel = styled.label<FilterLabelProps>`
+export const Label = styled.label<LabelProps>`
 	display: flex;
 	align-items: center;
 	background-color: ${({ isChecked, theme }) =>
@@ -17,6 +17,6 @@ export const FilterLabel = styled.label<FilterLabelProps>`
 	transition: ${({ theme }) => theme.transitions.standardTransition};
 `;
 
-export const FilterCheck = styled.input`
+export const Check = styled.input`
 	margin-right: 0.5rem;
 `;

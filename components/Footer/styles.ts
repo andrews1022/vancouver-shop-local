@@ -5,11 +5,8 @@ import { baseLayoutStyles } from '../../styles/lib';
 
 export const FooterWrapper = styled.footer`
 	${baseLayoutStyles};
+	margin-top: auto;
 	padding: 2.5rem ${({ theme }) => theme.spacing.leftRightDesktop};
-
-	@media ${({ theme }) => theme.mediaQueries.tabletPortrait} {
-		margin-top: auto;
-	}
 `;
 
 export const Row = styled.div`
