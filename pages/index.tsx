@@ -7,34 +7,38 @@ import React from 'react';
 
 // components
 import Businesses from '../components/Businesses';
-import FiftyFifty from '../components/FiftyFifty';
-import FiftyFiftyBox from '../components/FiftyFiftyBox';
+import ExternalLink from '../components/ExternalLink';
 
-// data
-import { threadSlug } from '../data/constants';
+// styled components
+import { Copy } from '../components/UI/Copy';
+import { FiftyFiftyBox } from '../components/UI/FiftyFiftyBox';
+import { FiftyFiftyWrapper } from '../components/UI/FiftyFiftyWrapper';
+
+// constants
+import { SLUG_REDDIT_THREAD } from '../constants/urls';
 
 // images
 import HomeImg from '../public/images/home.jpg';
 
 const Home: NextPage = () => (
 	<>
-		<FiftyFifty>
+		<FiftyFiftyWrapper>
 			<FiftyFiftyBox>
 				<h1>Welcome to Vancouver Shop Local!</h1>
-				<p>
+
+				<Copy>
 					Vancouver Shop Local is an effort that started on the{' '}
-					<a href={threadSlug} target='_blank' rel='noopener noreferrer'>
-						Vancouver subreddit
-					</a>{' '}
-					to help support local businesses in the Greater Vancouver Area during the holiday shopping
-					season, instead of buying from big chain retailors or online from sites like Amazon.
-					Below, you’ll find a list of businesses/artists/crafters.
-				</p>
+					<ExternalLink href={SLUG_REDDIT_THREAD}> Vancouver subreddit</ExternalLink> to help
+					support local businesses in the Greater Vancouver Area during the holiday shopping season,
+					instead of buying from big chain retailors or online from sites like Amazon. Below,
+					you&apos;ll find a list of businesses/artists/crafters.
+				</Copy>
 			</FiftyFiftyBox>
+
 			<FiftyFiftyBox isFirstOnMobile>
 				<Image src={HomeImg} alt='person accepting a package from a local business' />
 			</FiftyFiftyBox>
-		</FiftyFifty>
+		</FiftyFiftyWrapper>
 
 		<Businesses />
 	</>

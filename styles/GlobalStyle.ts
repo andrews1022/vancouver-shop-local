@@ -1,22 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
 import theme from './theme';
 
+// destructured theme properties
+const { colors, fonts, mediaQueries } = theme;
+
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 100%;
 
-    @media ${theme.mediaQueries.desktopSmall} {
+    @media ${mediaQueries.desktopSmall} {
 		  font-size: 87.5%;
-    }
-
-    @media ${theme.mediaQueries.tabletLandscape} {
-      font-size: 81.25%;
     }
   }
 
   body {
-	  font-family: ${theme.fonts.roboto};
+	  font-family: ${fonts.roboto};
     line-height: 1;
   }
 
@@ -32,24 +31,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    color: ${theme.colors.scooter};
+    color: ${colors.scooter};
     font-size: 2.25rem;
     margin-bottom: 1rem;
-  }
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
-
-    &:not(:last-child) {
-      margin-bottom: 0.625rem;
-    }
   }
 
   button, 
   input, 
   textarea {
-    font-family: ${theme.fonts.roboto};
+    font-family: ${fonts.roboto};
   }
 
   img,

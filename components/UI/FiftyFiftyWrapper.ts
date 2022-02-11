@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const FiftyFiftyWrapper = styled.div`
+export const FiftyFiftyWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -11,5 +11,3 @@ const FiftyFiftyWrapper = styled.div`
 		flex-direction: column;
 	}
 `;
-
-export default FiftyFiftyWrapper;

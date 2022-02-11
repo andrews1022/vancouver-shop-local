@@ -4,30 +4,30 @@ import Link from 'next/link';
 // react
 import React from 'react';
 
-// data
-import { homeSlug, aboutSlug, contactSlug } from '../../data/constants';
+// constants
+import { SLUG_ABOUT, SLUG_CONTACT, SLUG_HOME } from '../../constants/urls';
 
 // styled components
-import { Item, List, Title, Wrapper } from './styles';
+import * as S from './styles';
 
 const Nav = () => (
-	<Wrapper>
-		<List>
-			<Item>
-				<Title>
-					<Link href={homeSlug}>Vancouver Shop Local</Link>
-				</Title>
-			</Item>
+	<S.Nav>
+		<S.List>
+			<S.Item>
+				<S.Title>
+					<Link href={SLUG_HOME}>Vancouver Shop Local</Link>
+				</S.Title>
+			</S.Item>
 
-			<Item>
-				<Link href={aboutSlug}>About</Link>
-			</Item>
+			<S.Item>
+				<Link href={SLUG_ABOUT}>About</Link>
+			</S.Item>
 
-			<Item>
-				<Link href={contactSlug}>Contact</Link>
-			</Item>
-		</List>
-	</Wrapper>
+			<S.Item>
+				<Link href={SLUG_CONTACT}>Contact</Link>
+			</S.Item>
+		</S.List>
+	</S.Nav>
 );
 
 export default Nav;

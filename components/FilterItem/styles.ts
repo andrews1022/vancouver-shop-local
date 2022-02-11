@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 // props
-interface LabelProps {
+type LabelProps = {
 	isChecked: boolean;
-}
-
-export const Wrapper = styled.li``;
+};
 
 export const Label = styled.label<LabelProps>`
 	display: flex;

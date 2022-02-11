@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // shared styles
 import { baseGridStyles, baseLayoutStyles } from '../../styles/lib';
 
-export const Wrapper = styled.nav`
+export const Nav = styled.nav`
 	${baseLayoutStyles};
 `;
 
@@ -16,9 +16,6 @@ export const List = styled.ul`
 export const Item = styled.li`
 	&:first-child {
 		grid-column: 1 / span 10;
-	}
-
-	&:not(:first-child) {
 	}
 `;
 

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-// types
-import { TagMode } from '../../types/types';
-
 // utils
 import setTagBackgroundColor from '../../utils/setTagBackgroundColor';
 
+// types
+import { TagMode } from '../../types/types';
+
 // props
-interface TagProps {
+type TagProps = {
 	mode: TagMode;
-}
+};
 
 export const Wrapper = styled.li`
 	border: 0.125rem solid ${(props) => props.theme.shades.gainsboro};
@@ -42,16 +42,14 @@ export const Heading = styled.h3`
 	font-size: 1.25rem;
 `;
 
-export const Description = styled.p``;
-
-export const Tags = styled.ul`
+export const TagList = styled.ul`
 	display: inline-flex;
 	align-items: flex-start;
 	flex-direction: column;
 	gap: 1rem;
 `;
 
-export const Tag = styled.li<TagProps>`
+export const TagItem = styled.li<TagProps>`
 	display: inline-flex;
 	align-items: center;
 	line-height: 1.25;

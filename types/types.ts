@@ -1,12 +1,4 @@
-import React from 'react';
-
-export type Business = {
-	category: BusinessCategory;
-	description: string;
-	link: string;
-	location?: string;
-	name: string;
-};
+import { ChangeEvent } from 'react';
 
 export type BusinessCategory =
 	| 'Accessories'
@@ -30,6 +22,14 @@ export type BusinessCategory =
 	| 'Vacation'
 	| 'Wellness';
 
-export type Children = React.ReactNode;
+export type Business = {
+	category: BusinessCategory;
+	description: string;
+	link: string;
+	location?: string;
+	name: string;
+};
 
 export type TagMode = 'category' | 'directions' | 'link';
+
+export type ChangeEventType = ChangeEvent<HTMLInputElement>;

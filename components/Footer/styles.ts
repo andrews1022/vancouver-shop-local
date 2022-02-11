@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // shared styles
 import { baseLayoutStyles } from '../../styles/lib';
 
-export const FooterWrapper = styled.footer`
+export const Footer = styled.footer`
 	${baseLayoutStyles};
 	margin-top: auto;
 	padding: 2.5rem ${({ theme }) => theme.spacing.leftRightDesktop};
@@ -34,10 +34,6 @@ export const Title = styled.span`
 	font-size: 1.25rem;
 	font-weight: 500;
 `;
-
-export const Nav = styled.nav``;
-
-export const NavList = styled.ul``;
 
 export const NavItem = styled.li`
 	&:first-child {

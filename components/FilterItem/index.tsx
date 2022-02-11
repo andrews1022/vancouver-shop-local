@@ -1,32 +1,37 @@
 import React, { useState } from 'react';
 
-// styled components
-import { Check, Label, Wrapper } from './styles';
+// types
+import { BusinessCategory, ChangeEventType } from '../../types/types';
 
-interface FilterItemProps {
-	category: string;
+// styled components
+import * as S from './styles';
+
+type FilterItemProps = {
+	category: BusinessCategory;
 	// eslint-disable-next-line no-unused-vars
-	setFilters: (event: React.MouseEvent<HTMLInputElement>) => void;
-}
+	setFilters: (event: ChangeEventType) => void;
+};
 
 const FilterItem = ({ category, setFilters }: FilterItemProps) => {
 	const [isChecked, setIsChecked] = useState(false);
 
+	// event functions
+	const checkHandler = (event: ChangeEventType) => {
+		setFilters(event);
+
+		setIsChecked((prevState) => !prevState);
+	};
+
+	// reusable var for jsx below
+	const htmlAttr = `Category Filter ${category}`;
+
 	return (
-		<Wrapper>
-			<Label htmlFor={`Category Filter ${category}`} isChecked={isChecked}>
-				<Check
-					id={`Category Filter ${category}`}
-					onClick={(e) => {
-						setFilters(e);
-						setIsChecked((prevState) => !prevState);
-					}}
-					type='checkbox'
-					value={category}
-				/>
+		<li>
+			<S.Label htmlFor={htmlAttr} isChecked={isChecked}>
+				<S.Check id={htmlAttr} onChange={checkHandler} type='checkbox' value={category} />
 				{category}
-			</Label>
-		</Wrapper>
+			</S.Label>
+		</li>
 	);
 };
 

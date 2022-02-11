@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-interface FiftyFiftyBoxWrapperProps {
-	isFirstOnMobile: boolean | undefined;
-}
+type FiftyFiftyBoxProps = {
+	isFirstOnMobile?: boolean;
+};
 
-const FiftyFiftyBoxWrapper = styled.div<FiftyFiftyBoxWrapperProps>`
+export const FiftyFiftyBox = styled.div<FiftyFiftyBoxProps>`
 	flex: 0 0 48%;
 
 	@media ${({ theme }) => theme.mediaQueries.tabletPortrait} {
@@ -22,5 +22,3 @@ const FiftyFiftyBoxWrapper = styled.div<FiftyFiftyBoxWrapperProps>`
 		margin-left: 1.25rem;
 	}
 `;
-
-export default FiftyFiftyBoxWrapper;

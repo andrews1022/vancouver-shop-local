@@ -7,20 +7,14 @@ import FilterItem from '../FilterItem';
 // data
 import businessesData from '../../data/businesses';
 
+// types
+import { ChangeEventType } from '../../types/types';
+
 // reducer
 import { businessesReducer, initialState } from './reducer';
 
 // styled components
-import {
-	BusinessesList,
-	BusinessesWrapper,
-	FilterHeading,
-	FilterList,
-	FilterWrapper,
-	Wrapper
-} from './styles';
-
-// components
+import * as S from './styles';
 
 const Businesses = () => {
 	const businessesWrapperRef = useRef<HTMLDivElement>(null);
@@ -32,9 +26,8 @@ const Businesses = () => {
 	const categories = Array.from(new Set(businessesData.map((business) => business.category)));
 
 	// set filters fn
-	const setFilters = (event: React.MouseEvent<HTMLInputElement>) => {
-		const { value } = event.currentTarget as HTMLInputElement;
-
+	const setFilters = (event: ChangeEventType) => {
+		const { value } = event.currentTarget;
 		const { innerWidth } = window;
 
 		if (innerWidth <= 480) {
@@ -67,31 +60,24 @@ const Businesses = () => {
 	};
 
 	return (
-		<Wrapper>
-			<FilterWrapper>
-				<FilterHeading>Filter by Category:</FilterHeading>
-				<FilterList>
+		<S.Wrapper>
+			<S.FilterWrapper>
+				<S.FilterHeading>Filter by Category:</S.FilterHeading>
+				<S.FilterList>
 					{categories.map((category) => (
 						<FilterItem key={category} category={category} setFilters={setFilters} />
 					))}
-				</FilterList>
-			</FilterWrapper>
+				</S.FilterList>
+			</S.FilterWrapper>
 
-			<BusinessesWrapper ref={businessesWrapperRef}>
-				<BusinessesList>
-					{state.businesses.map(({ category, description, link, location, name }) => (
-						<BusinessesItem
-							key={name}
-							category={category}
-							description={description}
-							link={link}
-							location={location}
-							name={name}
-						/>
+			<S.BusinessesWrapper ref={businessesWrapperRef}>
+				<S.BusinessesList>
+					{state.businesses.map((business) => (
+						<BusinessesItem key={business.name} business={business} />
 					))}
-				</BusinessesList>
-			</BusinessesWrapper>
-		</Wrapper>
+				</S.BusinessesList>
+			</S.BusinessesWrapper>
+		</S.Wrapper>
 	);
 };
 

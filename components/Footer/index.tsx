@@ -4,37 +4,38 @@ import Link from 'next/link';
 // react
 import React from 'react';
 
-// data
-import { homeSlug, aboutSlug, contactSlug } from '../../data/constants';
+// constants
+import { SLUG_ABOUT, SLUG_CONTACT, SLUG_HOME } from '../../constants/urls';
 
 // styled components
-import { Box, Copyright, FooterWrapper, Nav, NavItem, NavList, Row, Title } from './styles';
+import * as S from './styles';
 
 const Footer = () => (
-	<FooterWrapper>
-		<Row>
-			<Box>
-				<Title>
-					<Link href={homeSlug}>Vancouver Shop Local</Link>
-				</Title>
-			</Box>
+	<S.Footer>
+		<S.Row>
+			<S.Box>
+				<S.Title>
+					<Link href={SLUG_HOME}>Vancouver Shop Local</Link>
+				</S.Title>
+			</S.Box>
 
-			<Box>
-				<Nav>
-					<NavList>
-						<NavItem>
-							<Link href={aboutSlug}>About</Link>
-						</NavItem>
-						<NavItem>
-							<Link href={contactSlug}>Contact</Link>
-						</NavItem>
-					</NavList>
-				</Nav>
-			</Box>
-		</Row>
+			<S.Box>
+				<nav>
+					<ul>
+						<S.NavItem>
+							<Link href={SLUG_ABOUT}>About</Link>
+						</S.NavItem>
 
-		<Copyright>Copyright © {new Date().getFullYear()} - All Rights Reserved.</Copyright>
-	</FooterWrapper>
+						<S.NavItem>
+							<Link href={SLUG_CONTACT}>Contact</Link>
+						</S.NavItem>
+					</ul>
+				</nav>
+			</S.Box>
+		</S.Row>
+
+		<S.Copyright>Copyright © {new Date().getFullYear()} - All Rights Reserved.</S.Copyright>
+	</S.Footer>
 );
 
 export default Footer;

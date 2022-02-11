@@ -2,33 +2,34 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 
 // components
-import FiftyFifty from '../components/FiftyFifty';
-import FiftyFiftyBox from '../components/FiftyFiftyBox';
+import ExternalLink from '../components/ExternalLink';
 
-// data
-import { threadSlug } from '../data/constants';
+// styled components
+import { Copy } from '../components/UI/Copy';
+import { FiftyFiftyBox } from '../components/UI/FiftyFiftyBox';
+import { FiftyFiftyWrapper } from '../components/UI/FiftyFiftyWrapper';
+
+// constants
+import { SLUG_REDDIT_THREAD } from '../constants/urls';
 
 // images
 import ContactImg from '../public/images/contact.jpg';
 
 const Contact: NextPage = () => (
-	<>
-		<FiftyFifty>
-			<FiftyFiftyBox>
-				<Image src={ContactImg} alt='person accepting a package from a local business' />
-			</FiftyFiftyBox>
-			<FiftyFiftyBox>
-				<h1>Contact</h1>
-				<p>
-					For all contact related details, please see the post on the{' '}
-					<a href={threadSlug} target='_blank' rel='noopener noreferrer'>
-						subreddit
-					</a>
-					.
-				</p>
-			</FiftyFiftyBox>
-		</FiftyFifty>
-	</>
+	<FiftyFiftyWrapper>
+		<FiftyFiftyBox>
+			<Image src={ContactImg} alt='person accepting a package from a local business' />
+		</FiftyFiftyBox>
+
+		<FiftyFiftyBox>
+			<h1>Contact</h1>
+
+			<Copy>
+				For all contact related details, please see the post on the{' '}
+				<ExternalLink href={SLUG_REDDIT_THREAD}>subreddit</ExternalLink>.
+			</Copy>
+		</FiftyFiftyBox>
+	</FiftyFiftyWrapper>
 );
 
 export default Contact;

@@ -4,6 +4,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDesktop, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
+// components
+import ExternalLink from '../ExternalLink';
+
 // types
 import { Business } from '../../types/types';
 
@@ -11,36 +14,43 @@ import { Business } from '../../types/types';
 import renderCategoryIcon from '../../utils/renderCategoryIcon';
 
 // styled components
-import { Description, Heading, Tag, Tags, Wrapper } from './styles';
+import { Copy } from '../UI/Copy';
+import * as S from './styles';
 
-const BusinessesItem = ({ category, description, link, location, name }: Business) => (
-	<Wrapper key={name}>
-		<Heading>{name}</Heading>
-		<Description>{description}</Description>
-		<Tags>
-			<Tag mode='category'>
-				{category}
-				<FontAwesomeIcon icon={renderCategoryIcon(category)} size='1x' />
-			</Tag>
-			<Tag mode='link'>
-				<a href={link} target='_blank' rel='noopener noreferrer'>
-					Visit Site
-					<FontAwesomeIcon icon={faDesktop} size='1x' />
-				</a>
-			</Tag>
-			{location ? (
-				<Tag mode='directions'>
-					<a
-						href={`https://www.google.com/maps/place/${location.replaceAll(' ', '+')}`}
-						target='_blank'
-						rel='noopener noreferrer'
+// props
+type BusinessesItemProps = {
+	business: Business;
+};
+
+const BusinessesItem = ({ business }: BusinessesItemProps) => (
+	<S.Wrapper>
+		<S.Heading>{business.name}</S.Heading>
+
+		<Copy>{business.description}</Copy>
+
+		<S.TagList>
+			<S.TagItem mode='category'>
+				{business.category}{' '}
+				<FontAwesomeIcon icon={renderCategoryIcon(business.category)} size='1x' />
+			</S.TagItem>
+
+			<S.TagItem mode='link'>
+				<ExternalLink href={business.link}>
+					Visit Site <FontAwesomeIcon icon={faDesktop} size='1x' />
+				</ExternalLink>
+			</S.TagItem>
+
+			{business.location ? (
+				<S.TagItem mode='directions'>
+					<ExternalLink
+						href={`https://www.google.com/maps/place/${business.location.replaceAll(' ', '+')}`}
 					>
 						Get Directions <FontAwesomeIcon icon={faMapMarkerAlt} size='1x' />
-					</a>
-				</Tag>
+					</ExternalLink>
+				</S.TagItem>
 			) : null}
-		</Tags>
-	</Wrapper>
+		</S.TagList>
+	</S.Wrapper>
 );
 
 export default BusinessesItem;

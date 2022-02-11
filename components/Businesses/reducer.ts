@@ -4,15 +4,10 @@ import businessesData from '../../data/businesses';
 // types
 import { Business } from '../../types/types';
 
-// reducer type
-interface InitialBusinessesState {
+// reducer types
+type BusinessesState = {
 	businesses: Business[];
 	filters: string[];
-}
-
-export const initialState: InitialBusinessesState = {
-	businesses: businessesData,
-	filters: []
 };
 
 type BusinessActions =
@@ -21,8 +16,13 @@ type BusinessActions =
 	| { type: 'RESET_BUSINESSES' }
 	| { type: 'SET_FILTERS'; payload: string };
 
+export const initialState: BusinessesState = {
+	businesses: businessesData,
+	filters: []
+};
+
 export const businessesReducer = (
-	state: InitialBusinessesState = initialState,
+	state: BusinessesState = initialState,
 	action: BusinessActions
 ) => {
 	switch (action.type) {
