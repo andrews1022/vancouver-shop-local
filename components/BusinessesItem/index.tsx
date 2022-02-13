@@ -7,6 +7,9 @@ import { faDesktop, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 // components
 import ExternalLink from '../ExternalLink';
 
+// constants
+import { SLUG_GOOGLE_MAPS } from '../../constants/urls';
+
 // types
 import { Business } from '../../types/types';
 
@@ -42,9 +45,7 @@ const BusinessesItem = ({ business }: BusinessesItemProps) => (
 
 			{business.location ? (
 				<S.TagItem mode='directions'>
-					<ExternalLink
-						href={`https://www.google.com/maps/place/${business.location.replaceAll(' ', '+')}`}
-					>
+					<ExternalLink href={`${SLUG_GOOGLE_MAPS}${business.location.replace(/ /g, '+')}`}>
 						Get Directions <FontAwesomeIcon icon={faMapMarkerAlt} size='1x' />
 					</ExternalLink>
 				</S.TagItem>
