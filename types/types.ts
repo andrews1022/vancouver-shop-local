@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
 
 export type BusinessCategory =
 	| 'Accessories'
@@ -32,4 +32,4 @@ export type Business = {
 
 export type TagMode = 'category' | 'directions' | 'link';
 
-export type ChangeEventType = ChangeEvent<HTMLInputElement>;
+export type InputChangeEvent = ChangeEvent<HTMLInputElement>;

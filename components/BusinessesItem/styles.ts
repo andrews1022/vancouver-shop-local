@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import setTagBackgroundColor from '../../utils/setTagBackgroundColor';
 
 // types
-import { TagMode } from '../../types/types';
+import type { TagMode } from '../../types/types';
 
 // props
 type TagProps = {

@@ -1,6 +1,6 @@
 // next
-import type { NextPage } from 'next';
 import Image from 'next/image';
+import type { NextPage } from 'next';
 
 // react
 import React from 'react';

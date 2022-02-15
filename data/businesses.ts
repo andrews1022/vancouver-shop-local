@@ -1,4 +1,4 @@
-import { Business } from '../types/types';
+import type { Business } from '../types/types';
 
 const businessesData: Business[] = [
 	// ACESSORIES

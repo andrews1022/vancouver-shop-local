@@ -2,7 +2,8 @@
 import Head from 'next/head';
 
 // react
-import React, { ReactNode } from 'react';
+import React from 'react';
+import type { ReactNode } from 'react';
 
 // components
 import Footer from '../Footer';

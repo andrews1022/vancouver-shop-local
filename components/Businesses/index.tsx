@@ -8,7 +8,7 @@ import FilterItem from '../FilterItem';
 import businessesData from '../../data/businesses';
 
 // types
-import { ChangeEventType } from '../../types/types';
+import type { InputChangeEvent } from '../../types/types';
 
 // reducer
 import { businessesReducer, initialState } from './reducer';
@@ -26,7 +26,7 @@ const Businesses = () => {
 	const categories = Array.from(new Set(businessesData.map((business) => business.category)));
 
 	// set filters fn
-	const setFilters = (event: ChangeEventType) => {
+	const setFilters = (event: InputChangeEvent) => {
 		const { value } = event.currentTarget;
 		const { innerWidth } = window;
 

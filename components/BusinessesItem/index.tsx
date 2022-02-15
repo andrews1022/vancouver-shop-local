@@ -11,7 +11,7 @@ import ExternalLink from '../ExternalLink';
 import { SLUG_GOOGLE_MAPS } from '../../constants/urls';
 
 // types
-import { Business } from '../../types/types';
+import type { Business } from '../../types/types';
 
 // utils
 import renderCategoryIcon from '../../utils/renderCategoryIcon';

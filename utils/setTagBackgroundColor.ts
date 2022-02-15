@@ -2,7 +2,7 @@
 import theme from '../styles/theme';
 
 // types
-import { TagMode } from '../types/types';
+import type { TagMode } from '../types/types';
 
 const setTagBackgroundColor = (mode: TagMode) => {
 	switch (mode) {

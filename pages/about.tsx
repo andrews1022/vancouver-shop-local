@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
 import Image from 'next/image';
+import type { NextPage } from 'next';
 
 // components
 import ExternalLink from '../components/ExternalLink';

@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 
 // types
-import { BusinessCategory, ChangeEventType } from '../../types/types';
+import type { BusinessCategory, InputChangeEvent } from '../../types/types';
 
 // styled components
 import * as S from './styles';
 
+// props
 type FilterItemProps = {
 	category: BusinessCategory;
 	// eslint-disable-next-line no-unused-vars
-	setFilters: (event: ChangeEventType) => void;
+	setFilters: (event: InputChangeEvent) => void;
 };
 
 const FilterItem = ({ category, setFilters }: FilterItemProps) => {
 	const [isChecked, setIsChecked] = useState(false);
 
 	// event functions
-	const checkHandler = (event: ChangeEventType) => {
+	const checkHandler = (event: InputChangeEvent) => {
 		setFilters(event);
 
 		setIsChecked((prevState) => !prevState);

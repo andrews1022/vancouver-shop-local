@@ -2,7 +2,7 @@
 import businessesData from '../../data/businesses';
 
 // types
-import { Business } from '../../types/types';
+import type { Business } from '../../types/types';
 
 // reducer types
 type BusinessesState = {
