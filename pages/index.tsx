@@ -21,27 +21,27 @@ import { SLUG_REDDIT_THREAD } from '../constants/urls';
 import HomeImg from '../public/images/home.jpg';
 
 const Home: NextPage = () => (
-	<>
-		<FiftyFiftyWrapper>
-			<FiftyFiftyBox>
-				<h1>Welcome to Vancouver Shop Local!</h1>
+  <>
+    <FiftyFiftyWrapper>
+      <FiftyFiftyBox>
+        <h1>Welcome to Vancouver Shop Local!</h1>
 
-				<Copy>
-					Vancouver Shop Local is an effort that started on the{' '}
-					<ExternalLink href={SLUG_REDDIT_THREAD}> Vancouver subreddit</ExternalLink> to help
-					support local businesses in the Greater Vancouver Area during the holiday shopping season,
-					instead of buying from big chain retailors or online from sites like Amazon. Below,
-					you&apos;ll find a list of businesses/artists/crafters.
-				</Copy>
-			</FiftyFiftyBox>
+        <Copy>
+          Vancouver Shop Local is an effort that started on the{' '}
+          <ExternalLink href={SLUG_REDDIT_THREAD}> Vancouver subreddit</ExternalLink> to help
+          support local businesses in the Greater Vancouver Area during the holiday shopping season,
+          instead of buying from big chain retailors or online from sites like Amazon. Below,
+          you&apos;ll find a list of businesses/artists/crafters.
+        </Copy>
+      </FiftyFiftyBox>
 
-			<FiftyFiftyBox isFirstOnMobile>
-				<Image src={HomeImg} alt='person accepting a package from a local business' />
-			</FiftyFiftyBox>
-		</FiftyFiftyWrapper>
+      <FiftyFiftyBox isFirstOnMobile>
+        <Image src={HomeImg} alt='person accepting a package from a local business' />
+      </FiftyFiftyBox>
+    </FiftyFiftyWrapper>
 
-		<Businesses />
-	</>
+    <Businesses />
+  </>
 );
 
 export default Home;

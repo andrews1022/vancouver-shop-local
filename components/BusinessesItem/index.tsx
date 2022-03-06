@@ -22,36 +22,36 @@ import * as S from './styles';
 
 // props
 type BusinessesItemProps = {
-	business: Business;
+  business: Business;
 };
 
 const BusinessesItem = ({ business }: BusinessesItemProps) => (
-	<S.Wrapper>
-		<S.Heading>{business.name}</S.Heading>
+  <S.Wrapper>
+    <S.Heading>{business.name}</S.Heading>
 
-		<Copy>{business.description}</Copy>
+    <Copy>{business.description}</Copy>
 
-		<S.TagList>
-			<S.TagItem mode='category'>
-				{business.category}{' '}
-				<FontAwesomeIcon icon={renderCategoryIcon(business.category)} size='1x' />
-			</S.TagItem>
+    <S.TagList>
+      <S.TagItem mode='category'>
+        {business.category}{' '}
+        <FontAwesomeIcon icon={renderCategoryIcon(business.category)} size='1x' />
+      </S.TagItem>
 
-			<S.TagItem mode='link'>
-				<ExternalLink href={business.link}>
-					Visit Site <FontAwesomeIcon icon={faDesktop} size='1x' />
-				</ExternalLink>
-			</S.TagItem>
+      <S.TagItem mode='link'>
+        <ExternalLink href={business.link}>
+          Visit Site <FontAwesomeIcon icon={faDesktop} size='1x' />
+        </ExternalLink>
+      </S.TagItem>
 
-			{business.location ? (
-				<S.TagItem mode='directions'>
-					<ExternalLink href={`${SLUG_GOOGLE_MAPS}${business.location.replace(/ /g, '+')}`}>
-						Get Directions <FontAwesomeIcon icon={faMapMarkerAlt} size='1x' />
-					</ExternalLink>
-				</S.TagItem>
-			) : null}
-		</S.TagList>
-	</S.Wrapper>
+      {business.location ? (
+        <S.TagItem mode='directions'>
+          <ExternalLink href={`${SLUG_GOOGLE_MAPS}${business.location.replace(/ /g, '+')}`}>
+            Get Directions <FontAwesomeIcon icon={faMapMarkerAlt} size='1x' />
+          </ExternalLink>
+        </S.TagItem>
+      ) : null}
+    </S.TagList>
+  </S.Wrapper>
 );
 
 export default BusinessesItem;

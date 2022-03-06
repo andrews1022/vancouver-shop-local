@@ -1,113 +1,113 @@
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import {
-	faPaintBrush,
-	faPumpSoap,
-	faBook,
-	faGem,
-	faCamera,
-	faBirthdayCake,
-	faCut,
-	faShoppingBag,
-	faTshirt,
-	faPizzaSlice,
-	faGamepad,
-	faCandyCane,
-	faHome,
-	faPen,
-	faStore,
-	faDog,
-	faVideo,
-	faClipboardList,
-	faUmbrellaBeach,
-	faHeartbeat
+  faPaintBrush,
+  faPumpSoap,
+  faBook,
+  faGem,
+  faCamera,
+  faBirthdayCake,
+  faCut,
+  faShoppingBag,
+  faTshirt,
+  faPizzaSlice,
+  faGamepad,
+  faCandyCane,
+  faHome,
+  faPen,
+  faStore,
+  faDog,
+  faVideo,
+  faClipboardList,
+  faUmbrellaBeach,
+  faHeartbeat
 } from '@fortawesome/free-solid-svg-icons';
 
 const renderCategoryIcon = (category: string) => {
-	switch (category) {
-		case 'Accessories': {
-			return faShoppingBag;
-		}
+  switch (category) {
+    case 'Accessories': {
+      return faShoppingBag;
+    }
 
-		case 'Art': {
-			return faPaintBrush;
-		}
+    case 'Art': {
+      return faPaintBrush;
+    }
 
-		case 'Bath & Cosmetics': {
-			return faPumpSoap;
-		}
+    case 'Bath & Cosmetics': {
+      return faPumpSoap;
+    }
 
-		case 'Books': {
-			return faBook;
-		}
+    case 'Books': {
+      return faBook;
+    }
 
-		case 'Candles': {
-			return faBirthdayCake;
-		}
+    case 'Candles': {
+      return faBirthdayCake;
+    }
 
-		case 'Craft': {
-			return faCut;
-		}
+    case 'Craft': {
+      return faCut;
+    }
 
-		case 'Fashion': {
-			return faTshirt;
-		}
+    case 'Fashion': {
+      return faTshirt;
+    }
 
-		case 'Film Equipment': {
-			return faVideo;
-		}
+    case 'Film Equipment': {
+      return faVideo;
+    }
 
-		case 'Food & Drinks': {
-			return faPizzaSlice;
-		}
+    case 'Food & Drinks': {
+      return faPizzaSlice;
+    }
 
-		case 'Games & Hobbies': {
-			return faGamepad;
-		}
+    case 'Games & Hobbies': {
+      return faGamepad;
+    }
 
-		case 'Holidays': {
-			return faCandyCane;
-		}
+    case 'Holidays': {
+      return faCandyCane;
+    }
 
-		case 'Home & Kitchen': {
-			return faHome;
-		}
+    case 'Home & Kitchen': {
+      return faHome;
+    }
 
-		case 'Jewelry': {
-			return faGem;
-		}
+    case 'Jewelry': {
+      return faGem;
+    }
 
-		case 'Literary': {
-			return faPen;
-		}
+    case 'Literary': {
+      return faPen;
+    }
 
-		case 'Marketplaces': {
-			return faStore;
-		}
+    case 'Marketplaces': {
+      return faStore;
+    }
 
-		case 'Pets': {
-			return faDog;
-		}
+    case 'Pets': {
+      return faDog;
+    }
 
-		case 'Photography': {
-			return faCamera;
-		}
+    case 'Photography': {
+      return faCamera;
+    }
 
-		case 'Things to Do': {
-			return faClipboardList;
-		}
+    case 'Things to Do': {
+      return faClipboardList;
+    }
 
-		case 'Vacation': {
-			return faUmbrellaBeach;
-		}
+    case 'Vacation': {
+      return faUmbrellaBeach;
+    }
 
-		case 'Wellness': {
-			return faHeartbeat;
-		}
+    case 'Wellness': {
+      return faHeartbeat;
+    }
 
-		default: {
-			return faReact;
-		}
-	}
+    default: {
+      return faReact;
+    }
+  }
 };
 
 export default renderCategoryIcon;
