@@ -18,7 +18,7 @@ import AboutImg from '../public/images/about.jpg';
 const About: NextPage = () => (
   <FiftyFiftyWrapper>
     <FiftyFiftyBox>
-      <Image src={AboutImg} alt='woman paying cashier in local business' />
+      <Image src={AboutImg} alt='woman paying cashier in local business' placeholder='blur' />
     </FiftyFiftyBox>
 
     <FiftyFiftyBox>

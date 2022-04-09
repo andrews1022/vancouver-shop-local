@@ -4,8 +4,8 @@ import Link from 'next/link';
 // react
 import React from 'react';
 
-// constants
-import { SLUG_ABOUT, SLUG_CONTACT, SLUG_HOME } from '../../constants/urls';
+// data
+import links from '../../data/links';
 
 // styled components
 import * as S from './styles';
@@ -13,19 +13,11 @@ import * as S from './styles';
 const Nav = () => (
   <S.Nav>
     <S.List>
-      <S.Item>
-        <S.Title>
-          <Link href={SLUG_HOME}>Vancouver Shop Local</Link>
-        </S.Title>
-      </S.Item>
-
-      <S.Item>
-        <Link href={SLUG_ABOUT}>About</Link>
-      </S.Item>
-
-      <S.Item>
-        <Link href={SLUG_CONTACT}>Contact</Link>
-      </S.Item>
+      {links.map((link) => (
+        <S.Item key={link.id}>
+          <Link href={link.slug}>{link.text}</Link>
+        </S.Item>
+      ))}
     </S.List>
   </S.Nav>
 );

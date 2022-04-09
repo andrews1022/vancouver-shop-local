@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useMemo, useReducer, useRef } from 'react';
 
 // components
 import BusinessesItem from '../BusinessesItem';
@@ -23,12 +23,15 @@ const Businesses = () => {
   const [state, dispatch] = useReducer(businessesReducer, initialState);
 
   // dynamic, duplicate-free list of all business categories
-  const categories = Array.from(new Set(businessesData.map((business) => business.category)));
+  const categories = useMemo(
+    () => Array.from(new Set(businessesData.map((business) => business.category))),
+    []
+  );
 
   // set filters fn
   const setFilters = (event: InputChangeEvent) => {
-    const { value } = event.currentTarget;
     const { innerWidth } = window;
+    const { value } = event.currentTarget;
 
     if (innerWidth <= 480) {
       // scroll cards into view

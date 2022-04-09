@@ -36,7 +36,11 @@ const Home: NextPage = () => (
       </FiftyFiftyBox>
 
       <FiftyFiftyBox isFirstOnMobile>
-        <Image src={HomeImg} alt='person accepting a package from a local business' />
+        <Image
+          src={HomeImg}
+          alt='person accepting a package from a local business'
+          placeholder='blur'
+        />
       </FiftyFiftyBox>
     </FiftyFiftyWrapper>
 

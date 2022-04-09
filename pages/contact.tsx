@@ -18,7 +18,11 @@ import ContactImg from '../public/images/contact.jpg';
 const Contact: NextPage = () => (
   <FiftyFiftyWrapper>
     <FiftyFiftyBox>
-      <Image src={ContactImg} alt='person accepting a package from a local business' />
+      <Image
+        src={ContactImg}
+        alt='person accepting a package from a local business'
+        placeholder='blur'
+      />
     </FiftyFiftyBox>
 
     <FiftyFiftyBox>

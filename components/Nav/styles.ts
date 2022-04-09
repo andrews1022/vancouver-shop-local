@@ -15,11 +15,8 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   &:first-child {
+    font-size: 1.5rem;
+    font-weight: 700;
     grid-column: 1 / span 10;
   }
-`;
-
-export const Title = styled.span`
-  font-size: 1.5rem;
-  font-weight: 700;
 `;

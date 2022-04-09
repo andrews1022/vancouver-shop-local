@@ -34,5 +34,3 @@ const Layout = ({ children }: LayoutProps) => (
 );
 
 export default Layout;
-
-// <Image src='/images/vercel.svg' alt='Vercel Logo' width={72} height={16} />

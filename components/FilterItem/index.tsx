@@ -23,13 +23,15 @@ const FilterItem = ({ category, setFilters }: FilterItemProps) => {
     setIsChecked((prevState) => !prevState);
   };
 
-  // reusable var for jsx below
-  const htmlAttr = `Category Filter ${category}`;
-
   return (
     <li>
-      <S.Label htmlFor={htmlAttr} isChecked={isChecked}>
-        <S.Check id={htmlAttr} onChange={checkHandler} type='checkbox' value={category} />
+      <S.Label htmlFor={`Category Filter ${category}`} isChecked={isChecked}>
+        <S.Check
+          id={`Category Filter ${category}`}
+          onChange={checkHandler}
+          type='checkbox'
+          value={category}
+        />
         {category}
       </S.Label>
     </li>
