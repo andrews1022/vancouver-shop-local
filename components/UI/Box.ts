@@ -1,10 +1,12 @@
+// this coment is intended to be a child of the Flex UI component
+
 import styled from 'styled-components';
 
-type FiftyFiftyBoxProps = {
+type BoxBoxProps = {
   isFirstOnMobile?: boolean;
 };
 
-export const FiftyFiftyBox = styled.div<FiftyFiftyBoxProps>`
+export const Box = styled.div<BoxBoxProps>`
   flex: 0 0 48%;
 
   @media ${({ theme }) => theme.mediaQueries.tabletPortrait} {

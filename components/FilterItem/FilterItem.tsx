@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-
-// types
-import type { BusinessCategory, InputChangeEvent } from '../../types/types';
+import { useState } from 'react';
 
 // styled components
-import * as S from './styles';
+import * as S from './FilterItem.styles';
 
-// props
+// custom types
+import type { BusinessCategory, InputChangeEvent } from '../../types/types';
+
+// props type
 type FilterItemProps = {
   category: BusinessCategory;
   // eslint-disable-next-line no-unused-vars

@@ -1,14 +1,10 @@
-// next
 import Link from 'next/link';
 
-// react
-import React from 'react';
+// styled components
+import * as S from './Footer.styles';
 
 // constants
 import { SLUG_ABOUT, SLUG_CONTACT, SLUG_HOME } from '../../constants/urls';
-
-// styled components
-import * as S from './styles';
 
 const Footer = () => (
   <S.Footer>

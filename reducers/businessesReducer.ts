@@ -1,8 +1,8 @@
 // data
-import businessesData from '../../data/businesses';
+import businessesData from '../data/businesses';
 
 // types
-import type { Business } from '../../types/types';
+import type { Business } from '../types/types';
 
 // reducer types
 type BusinessesState = {
@@ -22,6 +22,7 @@ export const initialState: BusinessesState = {
 };
 
 export const businessesReducer = (
+  // eslint-disable-next-line default-param-last
   state: BusinessesState = initialState,
   action: BusinessActions
 ) => {

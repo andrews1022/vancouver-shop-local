@@ -1,18 +1,14 @@
-// next
 import Image from 'next/image';
 import type { NextPage } from 'next';
 
-// react
-import React from 'react';
-
 // components
-import Businesses from '../components/Businesses';
-import ExternalLink from '../components/ExternalLink';
+import Businesses from '../components/Businesses/Businesses';
+import ExternalLink from '../components/ExternalLink/ExternalLink';
 
 // styled components
+import { Box } from '../components/UI/Box';
 import { Copy } from '../components/UI/Copy';
-import { FiftyFiftyBox } from '../components/UI/FiftyFiftyBox';
-import { FiftyFiftyWrapper } from '../components/UI/FiftyFiftyWrapper';
+import { Flex } from '../components/UI/Flex';
 
 // constants
 import { SLUG_REDDIT_THREAD } from '../constants/urls';
@@ -22,8 +18,8 @@ import HomeImg from '../public/images/home.jpg';
 
 const Home: NextPage = () => (
   <>
-    <FiftyFiftyWrapper>
-      <FiftyFiftyBox>
+    <Flex>
+      <Box>
         <h1>Welcome to Vancouver Shop Local!</h1>
 
         <Copy>
@@ -33,16 +29,16 @@ const Home: NextPage = () => (
           instead of buying from big chain retailors or online from sites like Amazon. Below,
           you&apos;ll find a list of businesses/artists/crafters.
         </Copy>
-      </FiftyFiftyBox>
+      </Box>
 
-      <FiftyFiftyBox isFirstOnMobile>
+      <Box>
         <Image
           src={HomeImg}
           alt='person accepting a package from a local business'
           placeholder='blur'
         />
-      </FiftyFiftyBox>
-    </FiftyFiftyWrapper>
+      </Box>
+    </Flex>
 
     <Businesses />
   </>

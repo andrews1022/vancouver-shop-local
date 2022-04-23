@@ -1,18 +1,14 @@
-// next
 import Head from 'next/head';
-
-// react
-import React from 'react';
 import type { ReactNode } from 'react';
 
 // components
-import Footer from '../Footer';
-import Nav from '../Nav';
+import Footer from '../Footer/Footer';
+import Nav from '../Nav/Nav';
 
 // styled components
-import * as S from './styles';
+import * as S from './Layout.styles';
 
-// props
+// props type
 type LayoutProps = {
   children: ReactNode;
 };

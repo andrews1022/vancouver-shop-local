@@ -2,12 +2,12 @@ import Image from 'next/image';
 import type { NextPage } from 'next';
 
 // components
-import ExternalLink from '../components/ExternalLink';
+import ExternalLink from '../components/ExternalLink/ExternalLink';
 
 // styled components
+import { Box } from '../components/UI/Box';
 import { Copy } from '../components/UI/Copy';
-import { FiftyFiftyBox } from '../components/UI/FiftyFiftyBox';
-import { FiftyFiftyWrapper } from '../components/UI/FiftyFiftyWrapper';
+import { Flex } from '../components/UI/Flex';
 
 // constants
 import { SLUG_REDDIT_THREAD } from '../constants/urls';
@@ -16,12 +16,12 @@ import { SLUG_REDDIT_THREAD } from '../constants/urls';
 import AboutImg from '../public/images/about.jpg';
 
 const About: NextPage = () => (
-  <FiftyFiftyWrapper>
-    <FiftyFiftyBox>
+  <Flex>
+    <Box>
       <Image src={AboutImg} alt='woman paying cashier in local business' placeholder='blur' />
-    </FiftyFiftyBox>
+    </Box>
 
-    <FiftyFiftyBox>
+    <Box>
       <h1>What is Vancouver Shop Local?</h1>
 
       <Copy>
@@ -38,8 +38,8 @@ const About: NextPage = () => (
         <li>Deals</li>
         <li>Most up to date list of stores/businesses</li>
       </ul>
-    </FiftyFiftyBox>
-  </FiftyFiftyWrapper>
+    </Box>
+  </Flex>
 );
 
 export default About;

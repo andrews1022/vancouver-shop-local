@@ -1,7 +1,7 @@
 // theme
 import theme from '../styles/theme';
 
-// types
+// custom types
 import type { TagMode } from '../types/types';
 
 const setTagBackgroundColor = (mode: TagMode) => {

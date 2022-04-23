@@ -1,20 +1,20 @@
-import React, { useMemo, useReducer, useRef } from 'react';
+import { useMemo, useReducer, useRef } from 'react';
 
 // components
-import BusinessesItem from '../BusinessesItem';
-import FilterItem from '../FilterItem';
+import BusinessesItem from '../BusinessesItem/BusinessesItem';
+import FilterItem from '../FilterItem/FilterItem';
+
+// styled components
+import * as S from './Businesses.styles';
+
+// reducers
+import { businessesReducer, initialState } from '../../reducers/businessesReducer';
 
 // data
 import businessesData from '../../data/businesses';
 
-// types
+// custom types
 import type { InputChangeEvent } from '../../types/types';
-
-// reducer
-import { businessesReducer, initialState } from './reducer';
-
-// styled components
-import * as S from './styles';
 
 const Businesses = () => {
   const businessesWrapperRef = useRef<HTMLDivElement>(null);

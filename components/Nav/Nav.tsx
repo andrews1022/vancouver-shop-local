@@ -1,14 +1,10 @@
-// next
 import Link from 'next/link';
 
-// react
-import React from 'react';
+// styled components
+import * as S from './Nav.styles';
 
 // data
 import links from '../../data/links';
-
-// styled components
-import * as S from './styles';
 
 const Nav = () => (
   <S.Nav>

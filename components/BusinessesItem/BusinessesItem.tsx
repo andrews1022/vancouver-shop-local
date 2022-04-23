@@ -1,26 +1,24 @@
-import React from 'react';
-
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDesktop, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 // components
-import ExternalLink from '../ExternalLink';
+import ExternalLink from '../ExternalLink/ExternalLink';
 
-// constants
-import { SLUG_GOOGLE_MAPS } from '../../constants/urls';
-
-// types
-import type { Business } from '../../types/types';
+// styled components
+import { Copy } from '../UI/Copy';
+import * as S from './BusinessesItem.styles';
 
 // utils
 import renderCategoryIcon from '../../utils/renderCategoryIcon';
 
-// styled components
-import { Copy } from '../UI/Copy';
-import * as S from './styles';
+// constants
+import { SLUG_GOOGLE_MAPS } from '../../constants/urls';
 
-// props
+// custom types
+import type { Business } from '../../types/types';
+
+// props type
 type BusinessesItemProps = {
   business: Business;
 };
