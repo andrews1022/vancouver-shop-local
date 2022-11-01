@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // base styles
-import { baseGridStyles } from '../../styles/lib';
+import { baseGridStyles } from "../../styles/lib";
 
 export const Wrapper = styled.div`
-  padding: 1.5% ${(props) => props.theme.spacing.leftRightDesktop};
+  padding: 1.5% ${({ theme }) => theme.spacing.leftRightDesktop};
 
   @media ${({ theme }) => theme.mediaQueries.tabletLandscape} {
     margin-bottom: 4%;

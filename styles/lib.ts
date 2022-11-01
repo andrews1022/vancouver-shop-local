@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export const baseLayoutStyles = css`
   background-color: ${({ theme }) => theme.colors.bahamaBlue};

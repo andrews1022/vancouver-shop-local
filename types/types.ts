@@ -1,26 +1,26 @@
-import type { ChangeEvent } from 'react';
+import type { ChangeEvent } from "react";
 
 export type BusinessCategory =
-  | 'Accessories'
-  | 'Art'
-  | 'Bath & Cosmetics'
-  | 'Books'
-  | 'Candles'
-  | 'Craft'
-  | 'Fashion'
-  | 'Film Equipment'
-  | 'Food & Drinks'
-  | 'Games & Hobbies'
-  | 'Holidays'
-  | 'Home & Kitchen'
-  | 'Jewelry'
-  | 'Literary'
-  | 'Marketplaces'
-  | 'Pets'
-  | 'Photography'
-  | 'Things to Do'
-  | 'Vacation'
-  | 'Wellness';
+  | "Accessories"
+  | "Art"
+  | "Bath & Cosmetics"
+  | "Books"
+  | "Candles"
+  | "Craft"
+  | "Fashion"
+  | "Film Equipment"
+  | "Food & Drinks"
+  | "Games & Hobbies"
+  | "Holidays"
+  | "Home & Kitchen"
+  | "Jewelry"
+  | "Literary"
+  | "Marketplaces"
+  | "Pets"
+  | "Photography"
+  | "Things to Do"
+  | "Vacation"
+  | "Wellness";
 
 export type Business = {
   category: BusinessCategory;
@@ -30,6 +30,6 @@ export type Business = {
   name: string;
 };
 
-export type TagMode = 'category' | 'directions' | 'link';
+export type TagMode = "category" | "directions" | "link";
 
 export type InputChangeEvent = ChangeEvent<HTMLInputElement>;

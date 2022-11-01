@@ -1,22 +1,22 @@
 // font awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDesktop, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDesktop, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 // components
-import ExternalLink from '../ExternalLink/ExternalLink';
+import ExternalLink from "../ExternalLink/ExternalLink";
 
 // styled components
-import { Copy } from '../UI/Copy';
-import * as S from './BusinessesItem.styles';
+import { Copy } from "../UI/Copy";
+import * as S from "./BusinessesItem.styles";
 
 // utils
-import renderCategoryIcon from '../../utils/renderCategoryIcon';
+import renderCategoryIcon from "../../utils/renderCategoryIcon";
 
 // constants
-import { SLUG_GOOGLE_MAPS } from '../../constants/urls';
+import { SLUG_GOOGLE_MAPS } from "../../constants/urls";
 
 // custom types
-import type { Business } from '../../types/types';
+import type { Business } from "../../types/types";
 
 // props type
 type BusinessesItemProps = {
@@ -30,21 +30,21 @@ const BusinessesItem = ({ business }: BusinessesItemProps) => (
     <Copy>{business.description}</Copy>
 
     <S.TagList>
-      <S.TagItem mode='category'>
-        {business.category}{' '}
-        <FontAwesomeIcon icon={renderCategoryIcon(business.category)} size='1x' />
+      <S.TagItem mode="category">
+        {business.category}{" "}
+        <FontAwesomeIcon icon={renderCategoryIcon(business.category)} size="1x" />
       </S.TagItem>
 
-      <S.TagItem mode='link'>
+      <S.TagItem mode="link">
         <ExternalLink href={business.link}>
-          Visit Site <FontAwesomeIcon icon={faDesktop} size='1x' />
+          Visit Site <FontAwesomeIcon icon={faDesktop} size="1x" />
         </ExternalLink>
       </S.TagItem>
 
       {business.location ? (
-        <S.TagItem mode='directions'>
-          <ExternalLink href={`${SLUG_GOOGLE_MAPS}${business.location.replace(/ /g, '+')}`}>
-            Get Directions <FontAwesomeIcon icon={faMapMarkerAlt} size='1x' />
+        <S.TagItem mode="directions">
+          <ExternalLink href={`${SLUG_GOOGLE_MAPS}${business.location.replace(/ /g, "+")}`}>
+            Get Directions <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" />
           </ExternalLink>
         </S.TagItem>
       ) : null}

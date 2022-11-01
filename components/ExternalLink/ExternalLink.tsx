@@ -1,5 +1,5 @@
-import React from 'react';
-import type { ReactNode } from 'react';
+import React from "react";
+import type { ReactNode } from "react";
 
 // props type
 type ExternalLinkProps = {
@@ -8,7 +8,7 @@ type ExternalLinkProps = {
 };
 
 const ExternalLink = ({ children, href }: ExternalLinkProps) => (
-  <a href={href} target='_blank' rel='noopener noreferrer'>
+  <a href={href} target="_blank" rel="noopener noreferrer">
     {children}
   </a>
 );

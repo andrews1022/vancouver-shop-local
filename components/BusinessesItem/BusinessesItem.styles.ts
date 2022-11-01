@@ -1,12 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // utils
-import setTagBackgroundColor from '../../utils/setTagBackgroundColor';
+import setTagBackgroundColor from "../../utils/setTagBackgroundColor";
 
 // types
-import type { TagMode } from '../../types/types';
+import type { TagMode } from "../../types/types";
 
-// props
 type TagProps = {
   mode: TagMode;
 };

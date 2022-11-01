@@ -1,4 +1,4 @@
-import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 import {
   faPaintBrush,
   faPumpSoap,
@@ -20,87 +20,87 @@ import {
   faClipboardList,
   faUmbrellaBeach,
   faHeartbeat
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
 
 const renderCategoryIcon = (category: string) => {
   switch (category) {
-    case 'Accessories': {
+    case "Accessories": {
       return faShoppingBag;
     }
 
-    case 'Art': {
+    case "Art": {
       return faPaintBrush;
     }
 
-    case 'Bath & Cosmetics': {
+    case "Bath & Cosmetics": {
       return faPumpSoap;
     }
 
-    case 'Books': {
+    case "Books": {
       return faBook;
     }
 
-    case 'Candles': {
+    case "Candles": {
       return faBirthdayCake;
     }
 
-    case 'Craft': {
+    case "Craft": {
       return faCut;
     }
 
-    case 'Fashion': {
+    case "Fashion": {
       return faTshirt;
     }
 
-    case 'Film Equipment': {
+    case "Film Equipment": {
       return faVideo;
     }
 
-    case 'Food & Drinks': {
+    case "Food & Drinks": {
       return faPizzaSlice;
     }
 
-    case 'Games & Hobbies': {
+    case "Games & Hobbies": {
       return faGamepad;
     }
 
-    case 'Holidays': {
+    case "Holidays": {
       return faCandyCane;
     }
 
-    case 'Home & Kitchen': {
+    case "Home & Kitchen": {
       return faHome;
     }
 
-    case 'Jewelry': {
+    case "Jewelry": {
       return faGem;
     }
 
-    case 'Literary': {
+    case "Literary": {
       return faPen;
     }
 
-    case 'Marketplaces': {
+    case "Marketplaces": {
       return faStore;
     }
 
-    case 'Pets': {
+    case "Pets": {
       return faDog;
     }
 
-    case 'Photography': {
+    case "Photography": {
       return faCamera;
     }
 
-    case 'Things to Do': {
+    case "Things to Do": {
       return faClipboardList;
     }
 
-    case 'Vacation': {
+    case "Vacation": {
       return faUmbrellaBeach;
     }
 
-    case 'Wellness': {
+    case "Wellness": {
       return faHeartbeat;
     }
 

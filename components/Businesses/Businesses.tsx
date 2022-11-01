@@ -1,20 +1,20 @@
-import { useMemo, useReducer, useRef } from 'react';
+import { useMemo, useReducer, useRef } from "react";
 
 // components
-import BusinessesItem from '../BusinessesItem/BusinessesItem';
-import FilterItem from '../FilterItem/FilterItem';
+import BusinessesItem from "../BusinessesItem/BusinessesItem";
+import FilterItem from "../FilterItem/FilterItem";
 
 // styled components
-import * as S from './Businesses.styles';
+import * as S from "./Businesses.styles";
 
 // reducers
-import { businessesReducer, initialState } from '../../reducers/businessesReducer';
+import { businessesReducer, initialState } from "../../reducers/businessesReducer";
 
 // data
-import businessesData from '../../data/businesses';
+import businessesData from "../../data/businesses";
 
 // custom types
-import type { InputChangeEvent } from '../../types/types';
+import type { InputChangeEvent } from "../../types/types";
 
 const Businesses = () => {
   const businessesWrapperRef = useRef<HTMLDivElement>(null);
@@ -35,12 +35,12 @@ const Businesses = () => {
 
     if (innerWidth <= 480) {
       // scroll cards into view
-      businessesWrapperRef.current?.scrollIntoView({ behavior: 'smooth' });
+      businessesWrapperRef.current?.scrollIntoView({ behavior: "smooth" });
     }
 
     // if state is now empty as result of unchecking all boxes
     if (!state.filters.length) {
-      dispatch({ type: 'RESET_BUSINESSES' });
+      dispatch({ type: "RESET_BUSINESSES" });
     }
 
     // if user clicks on a currently active department filter
@@ -49,8 +49,8 @@ const Businesses = () => {
 
       // remove it, and filter businesses accordingly
       if (matchingIndex > -1) {
-        dispatch({ type: 'REMOVE_FILTER', payload: value });
-        dispatch({ type: 'RENDER_BUSINESSES' });
+        dispatch({ type: "REMOVE_FILTER", payload: value });
+        dispatch({ type: "RENDER_BUSINESSES" });
       }
 
       return;
@@ -58,8 +58,8 @@ const Businesses = () => {
 
     // if user clicks on a department filter not in use,
     // add to list of filters and filter businesses accordingly
-    dispatch({ type: 'SET_FILTERS', payload: value });
-    dispatch({ type: 'RENDER_BUSINESSES' });
+    dispatch({ type: "SET_FILTERS", payload: value });
+    dispatch({ type: "RENDER_BUSINESSES" });
   };
 
   return (

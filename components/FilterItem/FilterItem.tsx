@@ -1,15 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 // styled components
-import * as S from './FilterItem.styles';
+import * as S from "./FilterItem.styles";
 
 // custom types
-import type { BusinessCategory, InputChangeEvent } from '../../types/types';
+import type { BusinessCategory, InputChangeEvent } from "../../types/types";
 
 // props type
 type FilterItemProps = {
   category: BusinessCategory;
-  // eslint-disable-next-line no-unused-vars
   setFilters: (event: InputChangeEvent) => void;
 };
 
@@ -29,7 +28,7 @@ const FilterItem = ({ category, setFilters }: FilterItemProps) => {
         <S.Check
           id={`Category Filter ${category}`}
           onChange={checkHandler}
-          type='checkbox'
+          type="checkbox"
           value={category}
         />
         {category}

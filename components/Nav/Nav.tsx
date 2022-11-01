@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 // styled components
-import * as S from './Nav.styles';
+import * as S from "./Nav.styles";
 
 // data
-import links from '../../data/links';
+import links from "../../data/links";
 
 const Nav = () => (
   <S.Nav>

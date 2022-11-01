@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 // styled components
-import * as S from './Footer.styles';
+import * as S from "./Footer.styles";
 
 // constants
-import { SLUG_ABOUT, SLUG_CONTACT, SLUG_HOME } from '../../constants/urls';
+import { SLUG_ABOUT, SLUG_CONTACT, SLUG_HOME } from "../../constants/urls";
 
 const Footer = () => (
   <S.Footer>

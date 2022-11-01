@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // shared styles
-import { baseGridStyles, baseLayoutStyles } from '../../styles/lib';
+import { baseGridStyles, baseLayoutStyles } from "../../styles/lib";
 
 export const Nav = styled.nav`
   ${baseLayoutStyles};

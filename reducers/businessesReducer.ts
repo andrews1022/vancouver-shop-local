@@ -1,24 +1,27 @@
 // data
-import businessesData from '../data/businesses';
+import businessesData from "../data/businesses";
 
 // types
-import type { Business } from '../types/types';
+import type { Business } from "../types/types";
 
-// reducer types
 type BusinessesState = {
   businesses: Business[];
   filters: string[];
 };
 
 type BusinessActions =
-  | { type: 'REMOVE_FILTER'; payload: string }
-  | { type: 'RENDER_BUSINESSES' }
-  | { type: 'RESET_BUSINESSES' }
-  | { type: 'SET_FILTERS'; payload: string };
+  | { type: "REMOVE_FILTER"; payload: string }
+  | { type: "RENDER_BUSINESSES" }
+  | { type: "RESET_BUSINESSES" }
+  | { type: "SET_FILTERS"; payload: string };
 
 export const initialState: BusinessesState = {
   businesses: businessesData,
   filters: []
+};
+
+const exhaustiveMatchingGuard = (action: never): never => {
+  throw new Error(`Should not have reached here. Incorrect action used: ${action}`);
 };
 
 export const businessesReducer = (
@@ -27,14 +30,14 @@ export const businessesReducer = (
   action: BusinessActions
 ) => {
   switch (action.type) {
-    case 'REMOVE_FILTER': {
+    case "REMOVE_FILTER": {
       return {
         ...state,
         filters: state.filters.filter((filt) => filt !== action.payload)
       };
     }
 
-    case 'RENDER_BUSINESSES': {
+    case "RENDER_BUSINESSES": {
       return {
         ...state,
         businesses: !state.filters.length
@@ -43,11 +46,11 @@ export const businessesReducer = (
       };
     }
 
-    case 'RESET_BUSINESSES': {
+    case "RESET_BUSINESSES": {
       return initialState;
     }
 
-    case 'SET_FILTERS': {
+    case "SET_FILTERS": {
       return {
         ...state,
         filters: [...state.filters, action.payload]
@@ -55,7 +58,7 @@ export const businessesReducer = (
     }
 
     default: {
-      return state;
+      return exhaustiveMatchingGuard(action);
     }
   }
 };

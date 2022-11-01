@@ -1,6 +1,6 @@
 // this coment is intended to be a child of the Flex UI component
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 type BoxBoxProps = {
   isFirstOnMobile?: boolean;

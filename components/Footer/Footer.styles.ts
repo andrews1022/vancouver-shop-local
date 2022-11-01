@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // shared styles
-import { baseLayoutStyles } from '../../styles/lib';
+import { baseLayoutStyles } from "../../styles/lib";
 
 export const Footer = styled.footer`
   ${baseLayoutStyles};
